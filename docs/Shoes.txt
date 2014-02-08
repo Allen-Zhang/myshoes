@@ -1,0 +1,24 @@
+Style:
+
+Athletic //ÔË¶¯
+Boots //Ñ¥×Ó
+Oxfords //Å£Æ¤Ð¬
+Flip Flops //ÍÏÐ¬
+Sandals //Á¹Ð¬
+Sneakers //°åÐ¬
+
+
+Brands:
+
+Nike (Athletic, Flip Flops)
+Adidas  (Athletic, Flip Flops)
+
+Timberland (Boots) 
+
+Vans (Sneakers)
+Polo Ralph Lauren (Sneakers)
+
+Crocs (Sandals)
+
+Dolce & Gabbana (Oxfords)
+Mezlan (Oxfords)
