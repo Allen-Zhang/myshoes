@@ -3,8 +3,11 @@
  <head>
   <meta charset="utf-8" />
   <title>MyShoes Home</title>
-  <link rel="stylesheet" href="css/main_page.css"> 
-  <link rel="stylesheet" href="css/navigation_menu.css"> 
+  <link rel="stylesheet" type="text/css" href="css/main_page.css"> 
+  <link rel="stylesheet" type="text/css" href="css/navigation_menu.css"> 
+  <link rel="stylesheet" type="text/css" href="css/ad_slider.css"> 
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/ad_slider.js"></script>
  </head>
 
  <body>
@@ -13,9 +16,25 @@
     <?php include 'header.php' ?>
 
     <!-- Ad Section -->
-    <div class="ad">
-        <img src="img/#.jpg" alt="Ad Field">
+    <div id="ad">
+        <a class="btnLeft" id="btnLeft" href="javascript:void(0);"></a>
+        <a class="btnRight" id="btnRight" href="javascript:void(0);"></a>
+        <div class="box">
+            <img style="opacity:1;filter:alpha(opacity=100);" src="images/ad_1.jpg" />
+            <img src="images/ad_2.jpg" /> 
+            <img src="images/ad_3.jpg" />
+            <img src="images/ad_4.jpg" /> 
+            <img src="images/ad_5.jpg" />  
+        </div>
+        <div class="page">
+            <a class="active" href="javascript:void(0);">1</a>
+            <a href="javascript:void(0);">2</a> 
+            <a href="javascript:void(0);">3</a>
+            <a href="javascript:void(0);">4</a>
+            <a href="javascript:void(0);">5</a>
+        </div>
     </div>
+
 
     <br/>
 
@@ -46,5 +65,6 @@
     <!-- Invoke the layout of footer -->
     <?php include 'footer.php' ?>
 
+   
  </body>
 </html>

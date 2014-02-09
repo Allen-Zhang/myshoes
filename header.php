@@ -2,9 +2,9 @@
 <div class="header">
 
 	<!-- Website Logo -->
-    <a href="index.php">
-    	<img class="logo" src="img/myshoes_logo.jpg" alt="MyShoes Logo">
-	</a>
+    <div class="header_logo">
+        <a href="index.php"><img src="img/myshoes_logo.jpg" alt="MyShoes Logo"></a>
+    </div>
 
     <!-- Header Info -->
     <div class="header_info">
@@ -77,7 +77,7 @@
 
             <li><a href="#">Sale</a></li>
 
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="contact.php">Contact Us</a></li>
         </ul>
     </div>
 

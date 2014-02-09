@@ -10,8 +10,8 @@ Sneakers //°åÐ¬
 
 Brands:
 
-Nike (Athletic, Flip Flops)
-Adidas  (Athletic, Flip Flops)
+Nike (Athletic, Sneakers, Flip Flops)
+Adidas  (Athletic, Sneakers, Flip Flops)
 
 Timberland (Boots) 
 

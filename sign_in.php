@@ -19,7 +19,7 @@
                 <th>Returning Customers</th>
             </tr>
             <tr>
-                <td>Hi, welcome back to MyShoes, please enter your email address and password.</td>
+                <td>Hi, welcome back to MyShoes, please enter your email address and password to sign in.</td>
             </tr>           
             <tr>
                 <td><label>Email Address</label></td>
