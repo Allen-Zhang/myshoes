@@ -2,9 +2,9 @@
 <html>
  <head>
   <meta charset="utf-8" />
-  <title>Sign In</title>
-  <link rel="stylesheet" href="css/main_page.css"> 
-  <link rel="stylesheet" href="css/navigation_menu.css"> 
+  <title>Contact Us</title>
+  <link type="text/css" rel="stylesheet" href="css/main.css"> 
+  <link type="text/css" rel="stylesheet" href="css/navigation.css"> 
  </head>
 
  <body>

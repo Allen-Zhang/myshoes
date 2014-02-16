@@ -12,7 +12,7 @@
     	<!-- User Info -->
     	<a href="sign_in.php">SIGN IN</a>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
     	<a href="sign_up.php">SIGN UP</a>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
-    	<a href="#">CART(0)</a>
+    	<a href="cart.php">CART(0)</a>
 
     	<br/><br/>
     
@@ -23,7 +23,6 @@
     	</form>
     </div>
 
-    <hr>
 
     <!-- Navigation Menu -->
     <div>
@@ -35,19 +34,19 @@
                 <ul class="subs">
                     <li><a href="#">Brand List 1</a>
                         <ul>
-                            <li><a href="#">Adidas</a></li>
-                            <li><a href="#">Crocs</a></li>
-                            <li><a href="#">Dolce &amp; Gabban</a></li>
-                            <li><a href="#">Mezlan</a></li>
+                            <li><a href="product.php?catagory=adidas">Adidas</a></li>
+                            <li><a href="product.php">Crocs</a></li>
+                            <li><a href="product.php">Dolce &amp; Gabban</a></li>
+                            <li><a href="product.php">Mezlan</a></li>
                          
                         </ul>
                     </li>
                     <li><a href="#">Brand List 2</a>
                         <ul>
-                            <li><a href="#">Nike</a></li>
-                            <li><a href="#">Polo Ralph Lauren</a></li>
-                            <li><a href="#">Timberland</a></li>
-                            <li><a href="#">Vans</a></li>  
+                            <li><a href="product.php">Nike</a></li>
+                            <li><a href="product.php">Polo Ralph Lauren</a></li>
+                            <li><a href="product.php">Timberland</a></li>
+                            <li><a href="product.php">Vans</a></li>  
                         </ul>
                     </li>
                 </ul>
@@ -58,24 +57,24 @@
                 <ul class="subs">
                     <li><a href="#">Style List 1</a>
                         <ul>
-                            <li><a href="#">Athletic</a></li>
-                            <li><a href="#">Boots</a></li>
-                            <li><a href="#">Flip Flops</a></li>
+                            <li><a href="product.php">Athletic</a></li>
+                            <li><a href="product.php">Boots</a></li>
+                            <li><a href="product.php">Flip Flops</a></li>
                         </ul>
                     </li>
                     <li><a href="#">Style List 2</a>
                         <ul>
-                            <li><a href="#">Oxfords</a></li>
-                            <li><a href="#">Sandals</a></li>
-                            <li><a href="#">Sneakers</a></li>
+                            <li><a href="product.php">Oxfords</a></li>
+                            <li><a href="product.php">Sandals</a></li>
+                            <li><a href="product.php">Sneakers</a></li>
                         </ul>
                     </li>
                 </ul>
             </li>
 
-            <li><a href="#">New Arrivals</a></li>
+            <li><a href="product.php">New Arrivals</a></li>
 
-            <li><a href="#">Sale</a></li>
+            <li><a href="subscribe.php">Subscribe</a></li>
 
             <li><a href="contact.php">Contact Us</a></li>
         </ul>

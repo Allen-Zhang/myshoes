@@ -3,8 +3,8 @@
  <head>
   <meta charset="utf-8" />
   <title>Sign Up</title>
-  <link rel="stylesheet" href="css/main_page.css"> 
-  <link rel="stylesheet" href="css/navigation_menu.css"> 
+  <link type="text/css" rel="stylesheet" href="css/main.css"> 
+  <link type="text/css" rel="stylesheet" href="css/navigation.css"> 
  </head>
 
  <body>
@@ -25,25 +25,25 @@
                     <td><label>Username</label></td>
                 </tr>
                 <tr>
-                    <td><input type="text" name="username" id="username" placeholder="Username"></td>
+                    <td><input type="text" name="username" id="username" placeholder="Username" required></td>
                 </tr>           
                 <tr>
                     <td><label>Email Address</label></td>
                 </tr>
                 <tr>
-                    <td><input type="text" name="email" id="email" placeholder="Email Address"></td>
+                    <td><input type="email" name="email" id="email" placeholder="Email Address" required></td>
                 </tr>
                 <tr>
                     <td><label>Password</label></td>
                 </tr>
                 <tr>
-                    <td><input type="password" name="password" id="password" placeholder="Password"></td>
+                    <td><input type="password" name="password" id="password" placeholder="Password" required></td>
                 </tr>
                 <tr>
                     <td><label>Confirm Password</label></td>
                 </tr>
                 <tr>
-                    <td><input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password"></td>
+                    <td><input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" required></td>
                 </tr>
             </table>  
             <input type="submit" name="sign_up" value="Sign up">   
