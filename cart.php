@@ -85,8 +85,8 @@
                                 <td><label>$</label></td>
                             </tr>
                           </table>';
-                    echo '<a href="index.php"><input type="button" name="continue_shopping" value="Continue Shopping"></a>';
-                    echo '<input type="submit" name="checkout" value="Checkout">';  
+                    echo '<input type="submit" value="Checkout">';
+                    echo '<a href="index.php"><input type="button" value="Continue Shopping"></a>';  
                 echo '</div>';   
                 echo '</form>';
 

@@ -4,6 +4,15 @@ body {
 	width:80%;
 }
 
+body input[type=text], body input[type=email], body input[type=password], body input[type=submit], body input[type=button], body select {
+	font-size:16px;
+}
+
+* font[class=star] {
+	font-size:16px;
+	color:#F00;
+}
+
 /* Website Logo */
 .header_logo { 
 	width:250px; 
@@ -29,7 +38,6 @@ body {
 	width:80px; 
 	height:30px;
 	margin-left:5px;
-	font-size:16px;
 }
 
 /* Ad Slider */
@@ -158,7 +166,6 @@ body {
 	margin-top:10px;
 	width:100px;
 	height:28px;
-	font-size:16px;
 }
 
 /* Contact Us */
@@ -192,7 +199,6 @@ body {
 	height:30px;
 	margin-top:18px;
 	margin-left:350px;
-	font-size:16px;
 }
 
 /* Product */
@@ -216,21 +222,56 @@ body {
 	padding-top:20px;
 	padding-bottom:20px;
 	width:1100px;
-	background-color:#CCC;
+	font-size:19px;
 }
 .product_img {
 	width:500px;
-	height:480px;
-	background-color:#FF0;
+	height:445px;
 }
 .product_img img{
 	width:100%;
 	height:100%;
 }
 .product_info {
-	background-color:#0F6;
 	width:550px;
 	float:right;
+}
+.product_info h2 {
+	color:#F60;
+}
+span.price1 {
+	text-decoration:line-through;
+	}
+span.price2 {
+	font-size:22px;
+	color:#F00;
+	}
+span.price3 {
+	color:#F00;
+	}
+.product_info label {
+	font-weight:bold;
+}
+div.product_info_list {
+	margin-left:30px;
+}
+.product_info form {
+	margin-left:20px;
+}
+.product_info form input[type=text] {
+	margin-left:5px;
+	width:60px;
+	height:23px;
+}
+.product_info form input[type=submit] {
+	margin-left:20px;
+	width:110px;
+	height:30px;
+}
+.product_info form select {
+	margin-left:20px;
+	width:120px;
+	height:29px;
 }
 
 /* Cart */
@@ -260,12 +301,10 @@ body {
 .cart_td input[type=button], .cart_td input[type=submit] {	
 	width:80px;
 	height:30px;
-	font-size:16px;
 }
 .cart_td input[type=text] {	
 	width:80px;
 	height:20px;
-	font-size:16px;
 }
 .cart_td_img {
 	width:180px;
@@ -289,26 +328,27 @@ body {
 }
 .cart_bottom input {
 	height:30px;
-	font-size:16px;
 }
 .cart_bottom input[type=submit] {
 	width:85px;
-	margin-left:15px;
-	font-size:16px;
+	margin-right:15px;
 }
 
 /* Address */
 .address {	
-	width:500px;
+	width:600px;
 	margin-left:12%;
 	padding-bottom:15px;
 	font-size:18px;
 }
 .address table{
+	margin-left:70px;
 	width:100%;
-	height:350px;}
+	height:350px;
+	font-size:19px;
+}
 .address td {
-	width:350px;
+	width:145px;
 }
 .address input[type=text] {	
 	width:350px;
@@ -324,7 +364,6 @@ body {
 .address div input[type=submit] {
 	height:30px;
 	width:165px;
-	font-size:16px;
 }
 .address select {
 	width:355px;
@@ -366,7 +405,6 @@ body {
 .payment input[type=submit] {	
 	width:120px;
 	height:30px;
-	font-size:16px;
 }	
 .payment p > span {
 	font-size:22px;
@@ -409,7 +447,6 @@ body {
 .confirmation input[type=submit] {	
 	width:90px;
 	height:30px;
-	font-size:16px;
 	margin-top:10px;
 }
 .confirm_bottom	{
@@ -500,6 +537,14 @@ body {
 	margin-left:12%;
 	padding-top:50px;
 }
+.my_order div[class=order_back] {
+	text-align:right;
+	margin-bottom:20px;
+}
+.my_order div[class=order_back] a input[type=button] {
+	width:82px;
+	height:30px;
+}
 
 /* Account */
 .account {
@@ -557,5 +602,86 @@ body {
 .account_info input[type=button] {	
 	width:60px;
 	height:30px;
-	font-size:16px;
 }	
+
+/* Account Info Setting */
+.edit_name, .edit_phone, .edit_login, .edit_address {
+	float:right;
+	width:67%;
+	margin-right:5%;
+}
+div.name_edit {
+	font-size:19px;
+	margin-left:80px;
+	margin-top:40px;
+	width:75%;
+}
+div.name_edit table, div.phone_edit table {
+	width:100%;
+}
+div.name_edit label[class=title1], div.phone_edit label[class=title1], div.login_edit label[class=title1], div.address_edit label[class=title1] {
+	font-size:23px;
+	color:#F60;
+	font-weight:bold;
+}
+div.name_edit label[class=title2], div.phone_edit label[class=title2] {
+	font-size:20px;
+	color:#F60;
+	font-weight:bold;
+}
+div.name_edit label[class=title3], div.phone_edit label[class=title3], div.login_edit label, div.address_edit label  {
+	font-weight:bold;
+}
+div.name_edit input[type=text], div.phone_edit input[type=text] {	
+	width:200px;
+	height:23px;
+}
+div.name_edit input[type=submit], div.phone_edit input[type=submit], div.login_edit input[type=submit], div.address_edit input[type=submit] {	
+	width:120px;
+	height:30px;
+}
+div.name_edit input[type=button], div.phone_edit input[type=button], div.login_edit input[type=button], div.address_edit input[type=button] {	
+	width:82px;
+	height:30px;
+}
+div.phone_edit {
+	font-size:19px;
+	margin-left:80px;
+	margin-top:40px;
+	width:80%;
+}
+div.login_edit, div.address_edit {
+	font-size:19px;
+	margin-left:80px;
+	margin-top:30px;
+	width:80%;
+}
+div.login_edit table, div.address_edit table {
+	width:90%;
+	height:210px;
+}
+div.login_edit input[type=email], div.login_edit input[type=password] {
+	width:280px;	
+	height:23px;
+}
+div.login_edit div {
+	margin-top:10px;
+	width:78%;
+	text-align:right;
+}
+div.address_edit input[type=text] {	
+	width:380px;
+	height:23px;
+}
+div.address_edit select {	
+	width:385px;
+	height:30px;
+}
+div.address_edit div {
+	margin-top:10px;
+	width:78%;
+	text-align:right;
+}
+
+
+

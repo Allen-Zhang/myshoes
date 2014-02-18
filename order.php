@@ -16,7 +16,7 @@
 
     <div class="my_order">
 
-        <h2>Your Orders</h2>
+        <h2>Order History</h2>
 
         <!-- Determine whether order is empty -->
         <?php           
@@ -76,7 +76,9 @@
                         }
 
                         echo '</table>';
-                }  
+                } 
+
+                echo '<div class="order_back"><a href="account_info.php"><input type="button" value="Go back"></a></div>';
 
             }
         ?>

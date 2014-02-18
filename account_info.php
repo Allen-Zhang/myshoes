@@ -35,7 +35,7 @@
                         </td>
                     </tr>
                     <tr>                       
-                        <td><label>Email:</label></td>
+                        <td><label>E-mail:</label></td>
                         <td>iloveliverpoolgo@gmail.com</td>
                         <td><a href="edit_login.php"><input type="button" name="edit_login" value="Edit"></a></td>
                     </tr>

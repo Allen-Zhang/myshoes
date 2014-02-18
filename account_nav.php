@@ -11,13 +11,13 @@
               <td><a href="account_info.php">Account Information</a></td>
             </tr>
             <tr>
-              <td><a href="#">Edit Login</a></td>
+              <td><a href="edit_login.php">Edit Login</a></td>
             </tr>
             <tr>
               <td><a href="order.php">My Orders</a></td>
             </tr>
             <tr>
-              <td><a href="#">My Address</a></td>
+              <td><a href="edit_address.php">My Address</a></td>
             </tr>
             <tr>
               <td><a href="subscribe.php">Newsletter Subscription</a></td>

@@ -15,34 +15,34 @@
     <?php include 'header.php' ?>
 
     <div class="address">
-        <h2>Your Address Information</h2>
+        <h2>Your Delivery Address Information</h2>
         <form action="payment.php" method="post">
             <table border="0" cellspacing="0">
                 <tr>
                     <td><label>Full Name:</label></td>
-                    <td><input type="text" name="full_name" required></td>
+                    <td><input type="text" name="full_name" required><font class="star"> *</font></td>
                 </tr>
                 <tr>
                     <td><label>Phone Number:</label></td>
-                    <td><input type="text" name="phone_number" required></td>
+                    <td><input type="text" name="phone_number" required><font class="star"> *</font></td>
                 </tr>                
                 <tr>
                     <td><label>Address Line1:</label></td>
                     <td><input type="text" name="address_line1" 
-                        placeholder="Street address, P.O box, company name, c/o" required></td>
+                        placeholder="Street address, P.O box, company name, c/o" required><font class="star"> *</font></td>
                 </tr>            
                 <tr>
                     <td><label>Address Line2:</label></td>
                     <td><input type="text" name="address_line2" 
-                        placeholder="Apartment, suite, unit, building, floor, etc." required></td>
+                        placeholder="Apartment, suite, unit, building, floor, etc." required><font class="star"> *</font></td>
                 </tr>
                 <tr>
                     <td><label>City:</label></td>
-                    <td><input type="text" name="city" required></td>
+                    <td><input type="text" name="city" required><font class="star"> *</font></td>
                 </tr>
                 <tr>
                     <td><label>Zip:</label></td>
-                    <td><input type="text" name="zip" required></td>
+                    <td><input type="text" name="zip" required><font class="star"> *</font></td>
                 </tr>
                 <tr>
                     <td><label>Country:</label></td>
@@ -51,7 +51,7 @@
                             <option value="">--</option>
                             <option value="CHINA">China</option>
                             <option value="USA">Unite State</option>
-                        </select>
+                        </select><font class="star"> *</font>
                     </td>
                 </tr>          
             </table>

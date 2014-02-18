@@ -21,7 +21,7 @@
         
         <form action="#" method="post">
             <label>Keep Update With Us:&nbsp;&nbsp;</label>
-            <input type="text" name="email" id="email" placeholder="Your Email Here"><br/>
+            <input type="text" name="email" id="email" placeholder="Your email address here"><br/>
             <span><input type="submit" class="subscribe_button" name="subscribe" value="Subscribe"></span>   
         </form>
 
