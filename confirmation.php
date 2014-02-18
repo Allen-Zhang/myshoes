@@ -15,58 +15,74 @@
     <?php include 'header.php' ?>
 
     <div class="confirmation">
+
         <h2>Your Order Confirmation</h2>
 
-        <p>Order/Address/Payment/Pay for it</p>
         <form action="confirmation_result.php" method="post">
-            <table border="0" cellspacing="0">
-                <tr>
-                    <td><label>Full Name:</label></td>
-                    <td><input type="text" name="full_name" required></td>
-                </tr>
-                <tr>
-                    <td><label>Phone Number:</label></td>
-                    <td><input type="text" name="phone_number" required></td>
-                </tr>                
-                <tr>
-                    <td><label>Address Line1:</label></td>
-                    <td><input type="text" name="address_line1" 
-                        placeholder="Street address, P.O box, company name, c/o" required></td>
-                </tr>            
-                <tr>
-                    <td><label>Address Line2:</label></td>
-                    <td><input type="text" name="address_line2" 
-                        placeholder="Apartment, suite, unit, building, floor, etc." required></td>
-                </tr>
-                <tr>
-                    <td><label>City:</label></td>
-                    <td><input type="text" name="city" required></td>
-                </tr>
-                <tr>
-                    <td><label>Zip:</label></td>
-                    <td><input type="text" name="zip" required></td>
-                </tr>
-                <tr>
-                    <td><label>Country:</label></td>
-                    <td>
-                        <select name="country" required>
-                            <option value="">--</option>
-                            <option value="CHINA">China</option>
-                            <option value="USA">Unite State</option>
-                        </select>
-                    </td>
-                </tr>          
-            </table>
-            <div>
-                <input type="submit" name="shipping_address" value="Ship to this address">
+
+            <div class="p">
+                <p><label>Shipping from:</label> MyShoes.com</p>
+                <p><label>Shipping to:</label> Yingyuan Zhang, 5830 85TH ST FL1, MIDDLE VILLAGE, NY, 11379, United States</p>
             </div>
+
+            <div class="p">
+                <p><label>Card number:</label> XXXXXXXXXXX</p>
+                <p><label>Name on card:</label> Yingyuan Zhang</p>
+            </div>
+
+            <table class="order" cellspacing="0" rules=rows>
+
+            <?php
+                define("ROW", 2);
+
+            
+                for($row = 1; $row <= ROW; $row++){
+
+                echo '<tr>
+                        <td><img src="#"></td>
+                        <td class="info">
+                            Nike2014 Newest Sporting Shoes XXXXXXX<br/>
+                            Product#: XX<br/>
+                            Size: XX
+                        </td>
+                        <td>Quantity: XX</td>
+                        <td>Unit Price: XX</td>
+                    </tr>';
+                }
+            ?>
+            </table>
+
+            <div class="confirm_bottom">
+                <table class="price">
+                    <tr>
+                        <td><label>Subtotal:</label></td>
+                        <td><label>$</label></td>
+                    </tr>
+                    <tr>
+                        <td><label>Shipping:</label></td>
+                        <td><label>$</label></td>
+                    </tr>
+                    <tr>
+                        <td><label>Tax:</label></td>
+                        <td><label>$</label></td>
+                    </tr>
+                    <tr>
+                        <td><label>Order Total:</label></td>
+                        <td><label>$</label></td>
+                    </tr>         
+                </table>
+
+                <div>
+                    <input type="submit" name="pay" value="Pay for it">
+                </div>
+            </div>
+
         </form>
 
     </div>
 
     <!-- Invoke the layout of footer -->
     <?php include 'footer.php' ?>
-
-   
+  
  </body>
 </html>

@@ -15,8 +15,10 @@
     <?php include 'header.php' ?>
 
     <div class="cart">
+
+        <!-- Determine whether cart is empty -->
         <?php
-            if(1 == 2) {
+            if(false) {
 
                 echo '<div class="cart_empty">';
                     echo '<h2>Your Cart is Empty</h2>';
@@ -30,7 +32,7 @@
 
                 define("ROW", 2);
 
-                    echo '<table border="0" width="100%" cellspacing="0">';
+                    echo '<table width="100%" cellspacing="0" rules=rows>';
 
                         echo '<tr class="cart_th">';
                             echo '<th colspan="2">SHOES</th>';
@@ -44,7 +46,11 @@
 
                         echo '<tr>';
                             echo '<td class="cart_td_img"><img src="#"></td>';
-                            echo '<td>Name<br/>Size: XX</td>';
+                            echo '<td>
+                                    Name<br/>
+                                    Product#: XX<br/>
+                                    Size: XX
+                                  </td>';
                             echo '<td class="cart_td">
                                     <form action="#" method="post">
                                         <input type="text" name="quantity">&nbsp;
@@ -60,27 +66,26 @@
                   
                     echo '</table>';
 
-                echo '<div class="cart_buttom">';
-                    echo '<hr>';
+                echo '<div class="cart_bottom">';
                     echo '<table>
                             <tr>
-                                <td>Subtotal</td>
-                                <td>$</td>
+                                <td><label>Subtotal:</label></td>
+                                <td><label>$</label></td>
                             </tr>
                             <tr>
-                                <td>Shipping</td>
-                                <td>$</td>
+                                <td><label>Shipping:</label></td>
+                                <td><label>$</label></td>
                             </tr>
                             <tr>
-                                <td>Tax</td>
-                                <td>$</td>
+                                <td><label>Tax:</label></td>
+                                <td><label>$</label></td>
                             </tr>
                             <tr>
-                                <td>Order Total&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                                <td>$</td>
+                                <td><label>Order Total:</label></td>
+                                <td><label>$</label></td>
                             </tr>
                           </table>';
-                    echo '<a href="index.php"><input type="button" name="continue_shopping" value="Continue Shopping"></a>&nbsp;';
+                    echo '<a href="index.php"><input type="button" name="continue_shopping" value="Continue Shopping"></a>';
                     echo '<input type="submit" name="checkout" value="Checkout">';  
                 echo '</div>';   
                 echo '</form>';

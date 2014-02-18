@@ -10,8 +10,22 @@
     <div class="header_info">
 
     	<!-- User Info -->
-    	<a href="sign_in.php">SIGN IN</a>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
-    	<a href="sign_up.php">SIGN UP</a>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
+        
+        <!-- Determine whether login -->
+        <?php
+            if(false) {
+    	       echo '<a href="sign_in.php">SIGN IN</a>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;';
+    	       echo '<a href="sign_up.php">SIGN UP</a>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;';
+            }
+            else {
+
+               echo '<a href="account_info.php">MY ACCOUNT</a>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;';
+               echo '<a href="index.php">SIGN OUT</a>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;';
+
+            }
+
+        ?>
+
     	<a href="cart.php">CART(0)</a>
 
     	<br/><br/>

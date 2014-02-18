@@ -28,6 +28,8 @@ body {
 .search_button { 
 	width:80px; 
 	height:30px;
+	margin-left:5px;
+	font-size:16px;
 }
 
 /* Ad Slider */
@@ -186,10 +188,11 @@ body {
 	height:23px;
 }
 .subscribe_button {
-	width:110px; 
+	width:100px; 
 	height:30px;
 	margin-top:18px;
-	margin-left:340px;
+	margin-left:350px;
+	font-size:16px;
 }
 
 /* Product */
@@ -242,6 +245,10 @@ body {
 	margin-left:12%;
 	padding-top:50px;
 }
+.cart form > table {
+	border:solid 1px #C6C6C6;
+
+}
 .cart_th {
 	background-color:#EBEBEB;
 	height:35px;
@@ -251,12 +258,14 @@ body {
 	width:180px;
 }
 .cart_td input[type=button], .cart_td input[type=submit] {	
-	width:75px;
+	width:80px;
 	height:30px;
+	font-size:16px;
 }
 .cart_td input[type=text] {	
 	width:80px;
 	height:20px;
+	font-size:16px;
 }
 .cart_td_img {
 	width:180px;
@@ -265,18 +274,27 @@ body {
 	width:170px;
 	height:150px;
 }
-.cart_buttom {
-	width:215px;
+.cart_bottom {
+	width:255px;
+	padding-top:15px;
 	padding-bottom:15px;
-	padding-left:76%;
+	padding-left:73%;
 }
-.cart_buttom table {
-	padding-bottom:7px;}
-.cart_buttom input {
+.cart_bottom table {
+	padding-bottom:7px;
+	font-weight:bold;
+}
+.cart_bottom table td {
+	width:160px;
+}
+.cart_bottom input {
 	height:30px;
+	font-size:16px;
 }
-.cart_buttom input[type=submit] {
-	width:80px;
+.cart_bottom input[type=submit] {
+	width:85px;
+	margin-left:15px;
+	font-size:16px;
 }
 
 /* Address */
@@ -305,7 +323,8 @@ body {
 }
 .address div input[type=submit] {
 	height:30px;
-	width:150px;
+	width:165px;
+	font-size:16px;
 }
 .address select {
 	width:355px;
@@ -345,10 +364,198 @@ body {
 	height:29px;
 }
 .payment input[type=submit] {	
-	width:110px;
+	width:120px;
 	height:30px;
+	font-size:16px;
 }	
 .payment p > span {
 	font-size:22px;
 	font-weight:bold;
 }
+
+/* Confirmation */
+.confirmation {
+	margin-left:12%;
+	width:900px;
+	padding-bottom:15px;
+	font-size:18px;	
+}
+.confirmation h2, .confirmation div[class=p] {
+	margin-bottom:40px;
+}
+
+.confirmation label {
+	font-weight:bold;
+}
+.confirmation table[class=order] {
+	border:solid 1px #C6C6C6;
+}
+.confirmation table[class=order] td {
+	width:140px;
+}
+.confirmation table[class=order] img {
+	width:120px;
+	height:100px;
+}
+.confirmation table[class=order] td[class=info] {
+	width:360px;
+}
+.confirmation table[class=price] {
+	margin-top:10px;
+}
+.confirmation table[class=price] td {
+	width:130px;
+}
+.confirmation input[type=submit] {	
+	width:90px;
+	height:30px;
+	font-size:16px;
+	margin-top:10px;
+}
+.confirm_bottom	{
+	width:220px;
+	padding-top:15px;
+	padding-bottom:10px;
+	padding-left:60%;
+}
+.confirm_bottom div {
+	text-align:right;
+}
+.confirmation_result {
+	margin-left:12%;
+	width:700px;
+	height:440px;
+	padding-bottom:15px;
+	font-size:18px;	
+}
+.confirmation_result font {
+	font-size:30px;	
+	font-weight:bold;
+	color:#F00;
+}
+.confirmation_result div[class=info] {
+	padding-left:200px;
+}
+
+/* Order */
+.my_order {
+	margin-left:12%;
+	width:950px;
+	font-size:18px;		
+}
+.my_order table {
+	width:950px;
+	border:solid 1px #C6C6C6;
+	margin-bottom:20px;
+}
+.my_order table p {
+	line-height:7px;}
+.my_order ul {
+	padding-left:15px;
+	list-style:none;
+}
+.my_order table td[class=info] {
+	border-right:solid 1px #C6C6C6;
+	width:320px;
+	padding-left:15px;
+}
+.my_order table td[class=empty_td] {
+	border-right:solid 1px #C6C6C6;
+}
+.my_order table td[class=status] {
+	padding-left:15px;
+}
+.my_order table td[class=shoes_info] {
+	border-top:solid 1px #C6C6C6;
+}
+
+.my_order label[class=date] {
+	font-size:22px;
+	font-weight:bold;
+	}
+.my_order label[class=status] {
+	font-size:25px;
+	color:#F60;
+	font-weight:bold;
+	}
+.my_order span[class=del_date] {
+	font-size:20px;
+	font-weight:bold;
+}
+.my_order span[class=total] {
+	color:#F00;
+	font-weight:bold;
+}
+.my_order td[class=img] {
+	border-top:solid 1px #C6C6C6;
+	padding-left:15px;
+	width:230px;
+}
+.my_order td[class=img] img {
+	width:210px;
+	height:180px;
+}
+.order_empty {
+	height:340px;
+	margin-left:12%;
+	padding-top:50px;
+}
+
+/* Account */
+.account {
+	font-size:18px;
+	height:485px;
+}
+
+/* My Account Navigation */
+.account_nav {
+	margin-left:5%;
+	padding-top:28px;
+	width:17.5%;
+}
+.account_nav table {
+	width:100%;
+	height:290px;
+	font-size:19px;
+	border:solid 1px #C6C6C6;
+}
+.account_nav th {
+	background-color:#EBEBEB;
+	font-size:20px;
+	height:40px;
+
+}
+.account_nav table tbody td {
+	border-top:solid 1px #C6C6C6;
+}
+.account_nav a {
+	padding-left:15px;
+	text-decoration: none;
+	color:#000;
+}
+.account_nav a:hover {
+	color:#03F;
+	font-weight:bold; 
+}
+
+/* Account Information */
+.account_info {
+	float:right;
+	width:67%;
+	margin-right:5%;
+}
+.account_info table {
+	font-size:19px;
+	margin-left:80px;
+	margin-top:30px;
+	width:65%;
+	height:200px;
+}
+.account_info table label {
+	font-weight:bold;
+}
+.account_info input[type=button] {	
+	width:60px;
+	height:30px;
+	font-size:16px;
+}	
