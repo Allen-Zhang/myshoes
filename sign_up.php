@@ -25,25 +25,37 @@
                     <td><label>Username</label></td>
                 </tr>
                 <tr>
-                    <td><input type="text" name="username" id="username" placeholder="Username" required></td>
+                    <td>
+                        <input type="text" name="username" id="username" placeholder="Username" required>
+                        <font class="star"> *</font>
+                    </td>
                 </tr>           
                 <tr>
                     <td><label>Email Address</label></td>
                 </tr>
                 <tr>
-                    <td><input type="email" name="email" id="email" placeholder="Email Address" required></td>
+                    <td>
+                        <input type="email" name="email" id="email" placeholder="Email Address" required>
+                        <font class="star"> *</font>
+                    </td>
                 </tr>
                 <tr>
                     <td><label>Password</label></td>
                 </tr>
                 <tr>
-                    <td><input type="password" name="password" id="password" placeholder="Password" required></td>
+                    <td>
+                        <input type="password" name="password" id="password" placeholder="Password" required>
+                        <font class="star"> *</font>
+                    </td>
                 </tr>
                 <tr>
                     <td><label>Confirm Password</label></td>
                 </tr>
                 <tr>
-                    <td><input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" required></td>
+                    <td>
+                        <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" required>
+                        <font class="star"> *</font>
+                    </td>
                 </tr>
             </table>  
             <input type="submit" name="sign_up" value="Sign up">   

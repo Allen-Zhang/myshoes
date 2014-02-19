@@ -14,9 +14,10 @@ body input[type=text], body input[type=email], body input[type=password], body i
 }
 
 /* Website Logo */
-.header_logo { 
-	width:250px; 
+.header_logo {
+	width:350px; 
 	height:150px;
+	margin-left:10px;
 }
 .header_logo img {
 	width:100%;
@@ -27,17 +28,29 @@ body input[type=text], body input[type=email], body input[type=password], body i
 .header_info {
 	position:absolute;
 	right:10%; 
-	top:90px;
+	top:88px;
 	text-align:right;     
 }
-.header_info input:first-child { 
-	width:230px; 
+.header_info a {
+	font-size:20px;
+	text-decoration:none;
+}
+.header_info input:first-child {
+	padding-left:5px;
+	margin-top:10px; 
+	width:275px; 
 	height:25px;
 }
 .search_button { 
-	width:80px; 
-	height:30px;
+	width:85px; 
+	height:32px;
 	margin-left:5px;
+}
+
+/* Footer */
+.footer { 
+	text-align:center;
+	font-size:17px;
 }
 
 /* Ad Slider */
@@ -136,18 +149,16 @@ body input[type=text], body input[type=email], body input[type=password], body i
 	height:80%;
 }
 
-/* Footer */
-.footer { 
-	text-align:center;
-}
-
 /* Sign In and Sign Up Page */
 .sign_in, .sign_up{
 	width:320px;
 	font-size:20px;
-	padding-top:20px;
+	padding-top:25px;
 	margin-left:62%;
-	height:460px;
+	height:455px;
+}
+.sign_in table th, .sign_up table th {
+	font-size:24px;
 }
 .sign_in table {
 	height:280px;
@@ -226,7 +237,7 @@ body input[type=text], body input[type=email], body input[type=password], body i
 }
 .product_img {
 	width:500px;
-	height:445px;
+	height:442px;
 }
 .product_img img{
 	width:100%;
@@ -344,7 +355,7 @@ div.product_info_list {
 .address table{
 	margin-left:70px;
 	width:100%;
-	height:350px;
+	height:351px;
 	font-size:19px;
 }
 .address td {
@@ -409,6 +420,7 @@ div.product_info_list {
 .payment p > span {
 	font-size:22px;
 	font-weight:bold;
+	color:#F60;
 }
 
 /* Confirmation */
@@ -549,7 +561,7 @@ div.product_info_list {
 /* Account */
 .account {
 	font-size:18px;
-	height:485px;
+	height:480px;
 }
 
 /* My Account Navigation */

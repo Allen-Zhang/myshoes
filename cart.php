@@ -53,7 +53,7 @@
                                   </td>';
                             echo '<td class="cart_td">
                                     <form action="#" method="post">
-                                        <input type="text" name="quantity">&nbsp;
+                                        <input type="text" name="quantity" required>&nbsp;
                                         <input type="submit" value="Update">
                                     </form>
                                   </td>';

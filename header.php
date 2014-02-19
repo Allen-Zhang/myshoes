@@ -3,7 +3,7 @@
 
 	<!-- Website Logo -->
     <div class="header_logo">
-        <a href="index.php"><img src="img/myshoes_logo.jpg" alt="MyShoes Logo"></a>
+        <a href="index.php"><img src="images/logo/MyShoes_small.jpg" alt="MyShoes Logo"></a>
     </div>
 
     <!-- Header Info -->
@@ -28,10 +28,12 @@
 
     	<a href="cart.php">CART(0)</a>
 
-    	<br/><br/>
+    	<br/>
     
     	<!-- Products Searching -->
     	<form actioon="#.php" method="post">
+
+            <!-- if the input is null then redirect to index.php -->
     		<input type="text" name="search" placeholder="Search for product">
     		<input type="submit" class="search_button" value="Search">
     	</form>
