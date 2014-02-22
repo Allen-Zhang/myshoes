@@ -8,6 +8,12 @@ body input[type=text], body input[type=email], body input[type=password], body i
 	font-size:16px;
 }
 
+body label[class=msg] {
+	color:#F00;
+	font-weight:bold;
+	font-size:20px;
+}
+
 * font[class=star] {
 	font-size:16px;
 	color:#F00;
@@ -34,6 +40,7 @@ body input[type=text], body input[type=email], body input[type=password], body i
 .header_info a {
 	font-size:20px;
 	text-decoration:none;
+	color:#00C;
 }
 .header_info input:first-child {
 	padding-left:5px;
@@ -51,6 +58,7 @@ body input[type=text], body input[type=email], body input[type=password], body i
 .footer { 
 	text-align:center;
 	font-size:17px;
+	clear:both;
 }
 
 /* Ad Slider */
@@ -150,33 +158,56 @@ body input[type=text], body input[type=email], body input[type=password], body i
 }
 
 /* Sign In and Sign Up Page */
-.sign_in, .sign_up{
+.sign_in {
 	width:320px;
 	font-size:20px;
 	padding-top:25px;
 	margin-left:62%;
-	height:455px;
+	height:457px;
 }
-.sign_in table th, .sign_up table th {
+.sign_up {
+	width:600px;
+	font-size:18px;
+	margin-left:12%;
+	height:460px;	
+}
+.sign_in table th {
 	font-size:24px;
 }
+.sign_up form {
+	font-size:20px;
+	margin-left:70px;
+}
 .sign_in table {
-	height:280px;
+	height:300px;
 }
 .sign_up table  {
-	height:400px;
+	width:100%;
+	height:280px;
+}
+.sign_up table td {
+	width:180px;
 }
 .sign_in table label, .sign_up table label {	
 	font-weight:bold;
 }
-.sign_in table input, .sign_up table input {
+.sign_in table input {
 	width:280px;
-	height:25px;
+	height:23px;
 }
-.sign_in > form >input, .sign_up > form > input {
+.sign_up table input {
+	width:300px;
+	height:23px;
+}
+.sign_in > form > input, .sign_up > form div > input {
 	margin-top:10px;
-	width:100px;
-	height:28px;
+	width:85px;
+	height:30px;
+	margin-bottom:20px;
+}
+.sign_up > form div {
+	text-align:right;
+	margin-right:25px;
 }
 
 /* Contact Us */
@@ -209,7 +240,7 @@ body input[type=text], body input[type=email], body input[type=password], body i
 	width:100px; 
 	height:30px;
 	margin-top:18px;
-	margin-left:350px;
+	margin-left:358px;
 }
 
 /* Product */
@@ -223,8 +254,19 @@ body input[type=text], body input[type=email], body input[type=password], body i
 	font-weight:bold;
 }
 .product img {
-	width:100%;
-	height:250px;
+	width:95%;
+	height:220px;
+}
+.product td div strong a {
+	text-decoration:none;
+	color:#000;
+}
+.product td div > span {
+	color:#F00;
+	font-weight:bold;
+}
+.product td div + div{
+	text-align:center;
 }
 
 /* Product Details */
@@ -232,11 +274,11 @@ body input[type=text], body input[type=email], body input[type=password], body i
 	margin:auto;
 	padding-top:20px;
 	padding-bottom:20px;
-	width:1100px;
+	width:92%;
 	font-size:19px;
 }
 .product_img {
-	width:500px;
+	width:50%;
 	height:442px;
 }
 .product_img img{
@@ -244,8 +286,9 @@ body input[type=text], body input[type=email], body input[type=password], body i
 	height:100%;
 }
 .product_info {
-	width:550px;
+	width:45%;
 	float:right;
+	margin-right:5px;
 }
 .product_info h2 {
 	color:#F60;
@@ -265,6 +308,9 @@ span.price3 {
 }
 div.product_info_list {
 	margin-left:30px;
+}
+div.product_info_list ul li {
+	margin-top:10px;
 }
 .product_info form {
 	margin-left:20px;
@@ -305,24 +351,37 @@ div.product_info_list {
 	background-color:#EBEBEB;
 	height:35px;
 }
-.cart_td {	
+td.cart_td {	
 	text-align:center;
-	width:180px;
+	width:130px;
 }
-.cart_td input[type=button], .cart_td input[type=submit] {	
+td.cart_td input[type=button] {	
 	width:80px;
 	height:30px;
 }
-.cart_td input[type=text] {	
-	width:80px;
-	height:20px;
+td.cart_quantity input[type=submit]  {	
+	width:75px;
+	height:30px;
 }
-.cart_td_img {
-	width:180px;
+td.cart_quantity {
+	text-align:center;
+}
+td.cart_quantity input[type=text] {	
+	width:70px;
+	height:23px;
+}
+td.cart_td_img {
+	width:200px;
+	padding-left:10px;
 }
 .cart_td_img img {
-	width:170px;
+	padding-left:5px;
+	width:182px;
 	height:150px;
+}
+td.cart_td_name {
+	width:250px;
+	padding-left:5px;
 }
 .cart_bottom {
 	width:255px;
@@ -344,28 +403,68 @@ div.product_info_list {
 	width:85px;
 	margin-right:15px;
 }
+.cart label[class=name] a {
+	text-decoration:none;
+	color:#00C;
+	font-weight:bold;
+}
 
 /* Address */
 .address {	
-	width:600px;
+	width:750px;
 	margin-left:12%;
-	padding-bottom:15px;
+	padding-bottom:20px;
 	font-size:18px;
 }
-.address table{
-	margin-left:70px;
+.address table[class=new_address]{
+	margin-left:110px;
 	width:100%;
-	height:351px;
+	height:410px;
 	font-size:19px;
 }
-.address td {
+.address table[class=old_address]{
+	margin-left:60px;
+	width:100%;
+	font-size:19px;
+	border:solid 1px #C6C6C6;
+	margin-bottom:20px;
+}
+.address table[class=old_address] label {
+	font-size:22px;
+	font-weight:bold;
+	color:#F60;
+}
+.address table[class=old_address] tr td[class=rec_name] {
+	text-align:center;
+	width:30%;
+}
+.address table[class=old_address] tr td[class=address] {
+	width:40%;
+	padding-left:20px;
+	padding-top:20px;
+}
+.address table[class=old_address] input[name=old_address]{
+	width:180px;
+	height:30px;
+	margin-bottom:5px;
+}
+.address table[class=old_address] input[value=Edit], .address table[class=old_address] input[value=Remove] {
+	width:87.5px;
+	height:30px;
+}
+.address table[class=new_address] td {
 	width:145px;
+	height:30px;
+}
+.address h3 {
+	font-size:22px;
+	margin-left:60px;
 }
 .address input[type=text] {	
 	width:350px;
 	height:23px;
 }
-.address table label {	
+.address table[class=new_address] label {	
 	font-weight:bold;
 }
 .address div {
@@ -375,19 +474,23 @@ div.product_info_list {
 .address div input[type=submit] {
 	height:30px;
 	width:165px;
+	margin-right:23px;
 }
 .address select {
 	width:355px;
-	height:30px;
+	height:29px;
 }
 
 /* Payment */
 .payment {
 	margin-left:12%;
-	width:750px;
+	width:800px;
 	height:445px;
 	padding-bottom:15px;
 	font-size:18px;	
+}
+.payment > div {
+	margin-left:70px;
 }
 .payment label {
 	font-weight:bold;
@@ -420,7 +523,7 @@ div.product_info_list {
 .payment p > span {
 	font-size:22px;
 	font-weight:bold;
-	color:#F60;
+	color:#F30;
 }
 
 /* Confirmation */
@@ -516,8 +619,13 @@ div.product_info_list {
 }
 .my_order table td[class=shoes_info] {
 	border-top:solid 1px #C6C6C6;
+	padding-left:20px;
 }
-
+.my_order label[class=name] a {
+	text-decoration:none;
+	color:#00C;
+	font-weight:bold;
+}
 .my_order label[class=date] {
 	font-size:22px;
 	font-weight:bold;
@@ -537,11 +645,11 @@ div.product_info_list {
 }
 .my_order td[class=img] {
 	border-top:solid 1px #C6C6C6;
-	padding-left:15px;
+	padding-left:20px;
 	width:230px;
 }
 .my_order td[class=img] img {
-	width:210px;
+	width:220px;
 	height:180px;
 }
 .order_empty {
@@ -561,7 +669,7 @@ div.product_info_list {
 /* Account */
 .account {
 	font-size:18px;
-	height:480px;
+	height:482px;
 }
 
 /* My Account Navigation */
@@ -668,9 +776,14 @@ div.login_edit, div.address_edit {
 	margin-top:30px;
 	width:80%;
 }
-div.login_edit table, div.address_edit table {
-	width:90%;
-	height:210px;
+div.login_edit table {
+	width:100%;
+	height:215px;
+}
+
+div.address_edit table[class=new_address] {
+	width:100%;
+	height:400px;
 }
 div.login_edit input[type=email], div.login_edit input[type=password] {
 	width:280px;	
@@ -678,7 +791,7 @@ div.login_edit input[type=email], div.login_edit input[type=password] {
 }
 div.login_edit div {
 	margin-top:10px;
-	width:78%;
+	width:82.2%;
 	text-align:right;
 }
 div.address_edit input[type=text] {	
@@ -691,9 +804,33 @@ div.address_edit select {
 }
 div.address_edit div {
 	margin-top:10px;
-	width:78%;
 	text-align:right;
+	margin-bottom:20px;
+	margin-right:70px;
 }
-
-
+.address_edit table[class=old_address]{
+	width:105%;
+	height:100px;
+	font-size:19px;
+	border:solid 1px #C6C6C6;
+	margin-bottom:20px;	
+}
+.address_edit table[class=old_address] label {
+	font-size:22px;
+	font-weight:bold;
+	color:#F60;
+}
+.address_edit table[class=old_address] tr td[class=rec_name] {
+	text-align:center;
+	width:30%;
+}
+.address_edit table[class=old_address] tr td[class=address] {
+	width:40%;
+	padding-left:20px;
+	padding-top:20px;
+}
+.address_edit table[class=old_address] input[value=Edit], .address_edit table[class=old_address] input[value=Remove] {
+	width:87.5px;
+	height:30px;
+}
 

@@ -12,7 +12,7 @@
  <body>
 
     <!-- Invoke the layout of header -->
-    <?php include 'header.php' ?>
+    <?php include_once('header.php') ?>
 
     <div class="account">
 
@@ -67,12 +67,12 @@
         </div>
 
         <!-- Invoke the layout of account navigation -->
-        <?php include 'account_nav.php' ?>
+        <?php include_once('account_nav.php') ?>
        
     </div>
 
     <!-- Invoke the layout of footer -->
-    <?php include 'footer.php' ?>
+    <?php include_once('footer.php') ?>
   
  </body>
 </html>

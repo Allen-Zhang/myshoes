@@ -10,7 +10,7 @@
  <body>
 
     <!-- Invoke the layout of header -->
-    <?php include 'header.php' ?>
+    <?php include_once('header.php') ?>
     
     <!-- Products Display -->
     <div class="product">
@@ -26,9 +26,15 @@
 
                 for($col = 1; $col <= 4; $col++){
 
-                        echo '<td>';
-                        echo '<a href="product_details.php"><img src="#"></a>';
-                        echo '</td>';
+                        echo '<td>
+                                <div>
+                                    <a href="product_details.php"><img src="images/nike/Nike_Rosherun_Running_Shoe.jpg"></a>
+                                </div>
+                                <div>
+                                  <strong><a href="product_details.php">Nike_Rosherun_Running_Shoe</a></strong><br/>
+                                  Price: <span>$69.00</span>
+                                </div>
+                              </td>';
 
                     }
 
@@ -41,7 +47,7 @@
     </div>
 
     <!-- Invoke the layout of footer -->
-    <?php include 'footer.php' ?>
+    <?php include_once('footer.php') ?>
 
  </body>
 </html>

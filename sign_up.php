@@ -10,60 +10,61 @@
  <body>
 
     <!-- Invoke the layout of header -->
-    <?php include 'header.php' ?>
+    <?php include_once('header.php') ?>
     
     <div class="sign_up"> 
+                    
+        <h2>New User Registration</h2>
+
         <form action="#" method="post">
+
+        <P>Hi, welcome to MyShoes, please enter your name, phone number, email address and password to create your account.</p>
+                
             <table>
                 <tr>
-                    <th>New Customers</th>
-                </tr>
-                <tr>
-                    <td>Hi, welcome to MyShoes, please enter your name, email address and password to create your account.</td>
-                </tr>
-                <tr>
-                    <td><label>Username</label></td>
+                    <td><label>Username:</label></td>
+                    <td>
+                        <input type="text" name="username" id="username" placeholder="Username">
+                    </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="text" name="username" id="username" placeholder="Username" required>
-                        <font class="star"> *</font>
+                       <label>Phone Number:</label>
                     </td>
-                </tr>           
+                    <td>
+                       <input type="text" name="userphone" placeholder="Phone Number">
+                    </td>
+               </tr>           
                 <tr>
-                    <td><label>Email Address</label></td>
-                </tr>
-                <tr>
+                    <td><label>Email Address:</label></td>
                     <td>
                         <input type="email" name="email" id="email" placeholder="Email Address" required>
                         <font class="star"> *</font>
                     </td>
                 </tr>
                 <tr>
-                    <td><label>Password</label></td>
-                </tr>
-                <tr>
+                    <td><label>Password:</label></td>
                     <td>
                         <input type="password" name="password" id="password" placeholder="Password" required>
                         <font class="star"> *</font>
                     </td>
                 </tr>
                 <tr>
-                    <td><label>Confirm Password</label></td>
-                </tr>
-                <tr>
+                    <td><label>Confirm Password:</label></td>
                     <td>
                         <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" required>
                         <font class="star"> *</font>
                     </td>
                 </tr>
             </table>  
-            <input type="submit" name="sign_up" value="Sign up">   
+            <div>
+                <input type="submit" name="sign_up" value="Sign up"> 
+            </div>  
         </form>
     </div>
 
     <!-- Invoke the layout of footer -->
-    <?php include 'footer.php' ?>
+    <?php include_once('footer.php') ?>
 
  </body>
 </html>

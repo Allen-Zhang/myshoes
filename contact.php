@@ -10,7 +10,7 @@
  <body>
 
     <!-- Invoke the layout of header -->
-    <?php include 'header.php' ?>
+    <?php include_once('header.php') ?>
     
     <div class="contact">
         <h2>Contact Information</h2>
@@ -39,7 +39,7 @@
     </div>
 
     <!-- Invoke the layout of footer -->
-    <?php include 'footer.php' ?>
+    <?php include_once('footer.php') ?>
 
  </body>
 </html>

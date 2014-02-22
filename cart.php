@@ -12,7 +12,7 @@
  <body>
 
     <!-- Invoke the layout of header -->
-    <?php include 'header.php' ?>
+    <?php include_once('header.php') ?>
 
     <div class="cart">
 
@@ -45,13 +45,17 @@
                     for($row = 1; $row <= ROW; $row++){
 
                         echo '<tr>';
-                            echo '<td class="cart_td_img"><img src="#"></td>';
-                            echo '<td>
-                                    Name<br/>
-                                    Product#: XX<br/>
-                                    Size: XX
+                            echo '<td class="cart_td_img">
+                                    <a href="product_details.php"><img src="images/nike/Nike_Rosherun_Running_Shoe.jpg"></a>
                                   </td>';
-                            echo '<td class="cart_td">
+                            echo '<td class="cart_td_name">
+                                    <label class="name">
+                                        <a href="product_details.php">Nike_Rosherun_Running_Shoe</a>
+                                    </label><br/>
+                                    <label>Product#: XX</label><br/>
+                                    <label>Size: XX</label>
+                                  </td>';
+                            echo '<td class="cart_quantity">
                                     <form action="#" method="post">
                                         <input type="text" name="quantity" required>&nbsp;
                                         <input type="submit" value="Update">
@@ -96,7 +100,7 @@
     </div>
 
     <!-- Invoke the layout of footer -->
-    <?php include 'footer.php' ?>
+    <?php include_once('footer.php') ?>
 
    
  </body>

@@ -10,13 +10,13 @@
  <body>
 
     <!-- Invoke the layout of header -->
-    <?php include 'header.php' ?>
+    <?php include_once('header.php') ?>
     
     <div class="product_details">
 
         <!-- Product information Section -->
         <div class="product_info">
-            <h2>Product Name</h2>
+            <h2>Nike_Rosherun_Running_Shoe</h2>
             <strong>Product #: </strong>
 
             <hr>
@@ -28,14 +28,13 @@
 
                 <ul>
                     <li></li>
-                    <li></li>
-                    <li></li>
+                    <lquantity i></li>
                     <li></li>
                     <li></li>
                 </ul>   
 
                 <form>
-                    <label>Amount: </label><input type="text" name="amount" value="1">
+                    <label>Quantity: </label><input type="text" name="amount" value="1">
                     <select>
                         <option value="null">Select Size:</option>
                         <option value=""></option>
@@ -50,13 +49,13 @@
 
         <!-- Product Image Section -->
         <div class="product_img">
-            <img src="#" alt="Product Image">
+            <img src="images/nike/Nike_Rosherun_Running_Shoe.jpg" alt="Shoes Image">
         </div>
 
     </div>
 
     <!-- Invoke the layout of footer -->
-    <?php include 'footer.php' ?>
+    <?php include_once('footer.php') ?>
 
  </body>
 </html>

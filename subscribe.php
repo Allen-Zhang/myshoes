@@ -10,7 +10,7 @@
  <body>
 
     <!-- Invoke the layout of header -->
-    <?php include 'header.php' ?>
+    <?php include_once('header.php') ?>
     
     <div class="subscribe">
         <h2>Subscribe to MyShoes</h2>
@@ -21,14 +21,14 @@
         
         <form action="#" method="post">
             <label>Keep Update With Us:&nbsp;&nbsp;</label>
-            <input type="text" name="email" id="email" placeholder="Your email address here"><br/>
+            <input type="text" name="sub_email" id="email" placeholder="Your email address here" required><br/>
             <span><input type="submit" class="subscribe_button" name="subscribe" value="Subscribe"></span>   
         </form>
 
     </div>
 
     <!-- Invoke the layout of footer -->
-    <?php include 'footer.php' ?>
+    <?php include_once('footer.php') ?>
 
  </body>
 </html>

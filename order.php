@@ -12,7 +12,7 @@
  <body>
 
     <!-- Invoke the layout of header -->
-    <?php include 'header.php' ?>
+    <?php include_once('header.php') ?>
 
     <div class="my_order">
 
@@ -65,9 +65,13 @@
                                     // Add a empty td from the second line
                                     if($row > 1) { echo '<td class="empty_td"></td>'; }
 
-                                echo '<td class="img"><img src="#"></td>
+                                echo '<td class="img">
+                                        <a href="product_details.php"><img src="images/nike/Nike_Rosherun_Running_Shoe.jpg"></a>
+                                      </td>
                                     <td class="shoes_info">
-                                        <p><label>Name</label></p>
+                                        <p><label class="name">
+                                            <a href="product_details.php">Nike_Rosherun_Running_Shoe</a>
+                                            </label></p>
                                         <p><label>Product#: XX</label></p>
                                         <p><label>Size: XX</label></p>
                                         <p><label>Sold by MyShoes.com</label></p>
@@ -86,7 +90,7 @@
     </div>
 
     <!-- Invoke the layout of footer -->
-    <?php include 'footer.php' ?>
+    <?php include_once('footer.php') ?>
   
  </body>
 </html>

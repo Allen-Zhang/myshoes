@@ -1,3 +1,12 @@
+<?php
+    session_start();
+
+    $login = false;
+
+    if(isset($_SESSION['uid'])) 
+        $login = true;
+?>
+
 <!-- Header layout of the website  -->
 <div class="header">
 
@@ -13,15 +22,17 @@
         
         <!-- Determine whether login -->
         <?php
-            if(false) {
-    	       echo '<a href="sign_in.php">SIGN IN</a>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;';
-    	       echo '<a href="sign_up.php">SIGN UP</a>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;';
+            if($login) {
+
+               echo '<a href="account_info.php">MY ACCOUNT</a>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;';
+               echo '<a href="biz/sign_out.php">SIGN OUT</a>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;';
+
             }
             else {
 
-               echo '<a href="account_info.php">MY ACCOUNT</a>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;';
-               echo '<a href="index.php">SIGN OUT</a>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;';
-
+               echo '<a href="sign_in.php">SIGN IN</a>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;';
+               echo '<a href="sign_up.php">SIGN UP</a>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;';
+               
             }
 
         ?>

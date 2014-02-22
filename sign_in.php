@@ -10,17 +10,29 @@
  <body>
 
     <!-- Invoke the layout of header -->
-    <?php include 'header.php' ?>
+    <?php include_once('header.php') ?>
     
     <div class="sign_in">
-    <form action="#" method="post">
+    <form action="biz/authenticate.php" method="post">
         <table>
             <tr>
                 <th>Returning Customers</th>
             </tr>
             <tr>
                 <td>Hi, welcome back to MyShoes, please enter your email address and password to sign in.</td>
-            </tr>           
+            </tr>
+
+            <?php
+                if (isset($_SESSION['msg'])) {
+
+                    echo '<tr>
+                            <td><label class="msg">'.$_SESSION['msg'].'</label></td>
+                        </tr>';                    
+
+                    unset($_SESSION['msg']); 
+                } 
+            ?>
+          
             <tr>
                 <td><label>Email Address</label></td>
             </tr>
@@ -37,14 +49,12 @@
         <input type="submit" name="sign_in" value="Sign in">     
     </form>
 
-    <br/>
-
     <span>Not a registered user?  </span><a href="sign_up.php"> Sign up now!</a>
 
     </div>
 
     <!-- Invoke the layout of footer -->
-    <?php include 'footer.php' ?>
+    <?php include_once('footer.php') ?>
 
  </body>
 </html>

@@ -12,19 +12,51 @@
  <body>
 
     <!-- Invoke the layout of header -->
-    <?php include 'header.php' ?>
+    <?php include_once('header.php') ?>
 
     <div class="address">
         <h2>Your Delivery Address Information</h2>
+
+        <?php
+            define("ROW", 2);
+
+            for($row = 1; $row <= ROW; $row++){
+
+                echo '<table class="old_address">
+                        <tr>
+                            <td rowspan="3" class="rec_name">
+                                <label class="name">Yingyuan Zhang</label><br/>
+                                <span>(917)856-6699</span>
+                            </td>
+                            <td class="address">
+                                22 MOUNT VERNON ST<br/>
+                                BRIGHTON, MA, 02135<br/>
+                                United States
+                            </td>
+                            <td rowspan="3" class="button">
+                                <input type="button" name="old_address" value="Ship to this address"><br/>
+                                <input type="button" value="Edit">
+                                <input type="button" value="Remove">
+                            </td>
+                        </tr>
+                    </table>';
+
+            }
+        ?>
+
+        <h3>Add A New Address:</h3>
+
         <form action="payment.php" method="post">
-            <table border="0" cellspacing="0">
+            <table class="new_address">
                 <tr>
                     <td><label>Full Name:</label></td>
-                    <td><input type="text" name="full_name" required><font class="star"> *</font></td>
+                    <td><input type="text" name="rec_name" placeholder="Recipient's full name here"
+                        required><font class="star"> *</font></td>
                 </tr>
                 <tr>
                     <td><label>Phone Number:</label></td>
-                    <td><input type="text" name="phone_number" required><font class="star"> *</font></td>
+                    <td><input type="text" name="rec_phone" placeholder="Recipient's phone number here"
+                     required><font class="star"> *</font></td>
                 </tr>                
                 <tr>
                     <td><label>Address Line1:</label></td>
@@ -39,6 +71,10 @@
                 <tr>
                     <td><label>City:</label></td>
                     <td><input type="text" name="city" required><font class="star"> *</font></td>
+                </tr>
+                <tr>
+                    <td><label>State/Province/Region:</label></td>
+                    <td><input type="text" name="state" required><font class="star"> *</font></td>
                 </tr>
                 <tr>
                     <td><label>Zip:</label></td>
@@ -56,14 +92,14 @@
                 </tr>          
             </table>
             <div>
-                <input type="submit" name="shipping_address" value="Ship to this address">
+                <input type="submit" name="new_address" value="Ship to this address">
             </div>
         </form>
 
     </div>
 
     <!-- Invoke the layout of footer -->
-    <?php include 'footer.php' ?>
+    <?php include_once('footer.php') ?>
 
    
  </body>

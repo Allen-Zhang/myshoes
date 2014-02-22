@@ -14,10 +14,10 @@
               <td><a href="edit_login.php">Edit Login</a></td>
             </tr>
             <tr>
-              <td><a href="order.php">My Orders</a></td>
+              <td><a href="order.php">My Order History</a></td>
             </tr>
             <tr>
-              <td><a href="edit_address.php">My Address</a></td>
+              <td><a href="edit_address.php">My Address Book</a></td>
             </tr>
             <tr>
               <td><a href="subscribe.php">Newsletter Subscription</a></td>
