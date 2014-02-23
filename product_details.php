@@ -1,3 +1,7 @@
+<?php
+    require_once('biz/lib.php');
+?>
+
 <!DOCTYPE html>
 <html>
  <head>
@@ -35,12 +39,15 @@
 
                 <form>
                     <label>Quantity: </label><input type="text" name="amount" value="1">
-                    <select>
-                        <option value="null">Select Size:</option>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
+                    <select  name="quantity" required>
+                        <option value="">Select Size:</option>
+                            <?php 
+                                foreach ($sizelist as $sizes) {
+
+                                    echo '<option value="'.$sizes.'">'.$sizes.'</option>';  
+                                
+                                }
+                            ?>
                     </select>
                     <input type="submit" value="Add To Cart">  
                 </form>

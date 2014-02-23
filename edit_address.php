@@ -1,3 +1,7 @@
+<?php
+    require_once('biz/lib.php');
+?>
+
 <!DOCTYPE html>
 <html>
  <head>
@@ -99,8 +103,13 @@
                             <td>
                                 <select name="country" required>
                                     <option value="">--</option>
-                                    <option value="CHINA">China</option>
-                                    <option value="USA">Unite State</option>
+                                    <?php 
+                                        foreach ($countrylist as $countries) {
+
+                                            echo '<option value="'.$countries.'">'.$countries.'</option>';  
+                                        
+                                        }
+                                    ?>
                                 </select><font class="star"> *</font>
                             </td>
                         </tr>          
