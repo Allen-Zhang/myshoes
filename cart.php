@@ -14,14 +14,24 @@
     <!-- Invoke the layout of header -->
     <?php include_once('header.php') ?>
 
+    <?php           
+        if(false) {
+            echo '<div class="decoration5">
+                    <img src="images/decoration/decoration05.jpg">
+                </div>';
+        }
+    ?>
+
     <div class="cart">
+
+        <h2>My Shopping Cart</h2>
 
         <!-- Determine whether cart is empty -->
         <?php
             if(false) {
 
                 echo '<div class="cart_empty">';
-                    echo '<h2>Your Cart is Empty</h2>';
+                    echo '<h2 class="no_cart">Your Cart is Empty</h2>';
                     echo '<span>You have no items in your current cart.<span><br/><br/>';
                     echo '<span>Click </span><a href="index.php">here</a><span> to continue shopping.</span>';
                 echo '</div>';
@@ -57,7 +67,7 @@
                                   </td>';
                             echo '<td class="cart_quantity">
                                     <form action="#" method="post">
-                                        <input type="text" name="quantity" required>&nbsp;
+                                        <input type="text" name="quantity" value="1" required>&nbsp;
                                         <input type="submit" value="Update">
                                     </form>
                                   </td>';

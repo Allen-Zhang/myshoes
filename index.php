@@ -38,27 +38,33 @@
     <br/>
 
     <!-- Discount Product Section -->
+    <hr>
+    <p><font class="section_title">Discount Product</font></p>
+
     <div class="discount">
         <div class="dis_right">
-            <a href="product_details.php"><img src="img/#.jpg" alt="Discount Product 3"></a>
+            <a href="product.php"><img src="images/sale/sale_nike.jpg" alt="Discount Product 3"></a>
         </div>
         <div class="dis_middle">
-            <a href="product_details.php"><img src="img/#.jpg" alt="Discount Product 2"></a>
+            <a href="product.php"><img src="images/sale/sale_timberland.jpg" alt="Discount Product 2"></a>
         </div>
         <div class="dis_left">
-            <a href="product_details.php"><img src="img/#.jpg" alt="Discount Product 1"></a>
+            <a href="product.php"><img src="images/sale/sale_adidas.jpg" alt="Discount Product 1"></a>
         </div>
     </div>
 
     <br/>
 
     <!-- New Arrivals Section -->
+    <hr>
+    <p><font class="section_title">New Arrivals</font></p>
+
     <div class="new_arrivals">
-        <a href="product_details.php"><img src="img/#.jpg" alt="New Arrivals 1"></a>
-        <a href="product_details.php"><img src="img/#.jpg" alt="New Arrivals 2"></a>
-        <a href="product_details.php"><img src="img/#.jpg" alt="New Arrivals 3"></a>
-        <a href="product_details.php"><img src="img/#.jpg" alt="New Arrivals 4"></a>
-        <a href="product_details.php"><img src="img/#.jpg" alt="New Arrivals 5"></a>
+        <a href="product_details.php"><img src="images/nike/Nike_Rosherun_Running_Shoe.jpg" alt="New Arrivals 1"></a>
+        <a href="product_details.php"><img src="images/nike/Nike_Rosherun_Running_Shoe.jpg" alt="New Arrivals 2"></a>
+        <a href="product_details.php"><img src="images/nike/Nike_Rosherun_Running_Shoe.jpg" alt="New Arrivals 3"></a>
+        <a href="product_details.php"><img src="images/nike/Nike_Rosherun_Running_Shoe.jpg" alt="New Arrivals 4"></a>
+        <a href="product_details.php"><img src="images/nike/Nike_Rosherun_Running_Shoe.jpg" alt="New Arrivals 5"></a>
     </div>
 
     <!-- Invoke the layout of footer -->

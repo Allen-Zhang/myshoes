@@ -12,6 +12,10 @@
     <!-- Invoke the layout of header -->
     <?php include_once('header.php') ?>
     
+    <div class="decoration2">
+        <img src="images/decoration/decoration02.jpg">
+    </div>
+
     <div class="sign_up"> 
                     
         <h2>New User Registration</h2>

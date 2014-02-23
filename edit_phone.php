@@ -33,7 +33,7 @@
                         <tr>
                            <td>
                                <label class="title3">New Phone Number:&nbsp;</label>
-                               <input type="text" name="edit_phone" placeholder="Enter your phone number" required>
+                               <input type="text" name="edit_phone" maxlength="10" placeholder="Enter your phone number" required>
                                <font class="star"> *</font>
                            </td>
                            <td>

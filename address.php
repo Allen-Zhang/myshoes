@@ -55,7 +55,7 @@
                 </tr>
                 <tr>
                     <td><label>Phone Number:</label></td>
-                    <td><input type="text" name="rec_phone" placeholder="Recipient's phone number here"
+                    <td><input type="text" name="rec_phone" maxlength="10" placeholder="Recipient's phone number here"
                      required><font class="star"> *</font></td>
                 </tr>                
                 <tr>
@@ -78,7 +78,7 @@
                 </tr>
                 <tr>
                     <td><label>Zip:</label></td>
-                    <td><input type="text" name="zip" required><font class="star"> *</font></td>
+                    <td><input type="text" name="zip" maxlength="5" required><font class="star"> *</font></td>
                 </tr>
                 <tr>
                     <td><label>Country:</label></td>

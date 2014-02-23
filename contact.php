@@ -11,7 +11,11 @@
 
     <!-- Invoke the layout of header -->
     <?php include_once('header.php') ?>
-    
+
+    <div class="decoration4">
+        <img src="images/decoration/decoration04.jpg">
+    </div>
+
     <div class="contact">
         <h2>Contact Information</h2>
         <p>Please contact us with ANY questions regarding our merchandise, availability or order status the following ways:</p>

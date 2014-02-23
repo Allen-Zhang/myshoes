@@ -14,6 +14,14 @@
     <!-- Invoke the layout of header -->
     <?php include_once('header.php') ?>
 
+    <?php           
+        if(false) {
+            echo '<div class="decoration6">
+                    <img src="images/decoration/decoration06.jpg">
+                </div>';
+        }
+    ?>
+
     <div class="my_order">
 
         <h2>Order History</h2>
@@ -23,7 +31,7 @@
             if(false) {
 
                 echo '<div class="order_empty">';
-                    echo '<h2>No Orders Found.</h2>';
+                    echo '<h2 class="no_order">No Orders Found.</h2>';
                     echo '<span>Click </span><a href="index.php">here</a><span> to continue shopping.</span>';
                 echo '</div>';
 

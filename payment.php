@@ -30,7 +30,7 @@
                     </tr>
                     <tr>
                         <td><input type="text" name="name_on_card" required></td>
-                        <td><input type="text" name="card_number" required></td>
+                        <td><input type="text" name="card_number" maxlength="16" required></td>
                         <td>
                             <select name="month" required>
                                 <option value="01">01</option>

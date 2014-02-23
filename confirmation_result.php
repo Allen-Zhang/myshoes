@@ -23,6 +23,9 @@
                 if(true) {
 
                     echo '<p><font>You order is paid successfully!</font></p>';
+                    echo '<p>Order Number: <span class="order_number">105-0226438-4661002</span></p>
+                          <p>Estimated Delivery: January 14, 2014</p>
+                          <p><a href="order.php">Review your order</a></p>';
 
                 }
                 else {

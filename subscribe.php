@@ -12,6 +12,10 @@
     <!-- Invoke the layout of header -->
     <?php include_once('header.php') ?>
     
+    <div class="decoration3">
+        <img src="images/decoration/decoration03.jpg">
+    </div>
+
     <div class="subscribe">
         <h2>Subscribe to MyShoes</h2>
         

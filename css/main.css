@@ -132,44 +132,64 @@ body label[class=msg] {
 	height:350px
 }
 .dis_right {	
-	background-color:#90C;
 	float:right;
 }
 .dis_middle {	
-	background-color:#00F;
 	float:right;
 	margin-right:1.98%;
-}
-.dis_left {	
-	background-color:#0FF;
 }
 
 /* New Arrivals Section */
 .new_arrivals {
 	width:100%; 
-	height:250px;
-	background-color:#FF3;	   
+	height:250px;	   
 	}
 .new_arrivals img {
-	padding-top:2%;
 	padding-left:1%;
 	width:18.5%;
 	height:80%;
 }
+font.section_title {
+	font-size:30px;
+	font-weight:bold;
+	color:#F60;
+}
 
 /* Sign In and Sign Up Page */
 .sign_in {
-	width:320px;
+	width:25%;
 	font-size:20px;
-	padding-top:25px;
+	padding-top:45px;
 	margin-left:62%;
-	height:457px;
+	height:437px;
+}
+div.decoration1 {
+	width:46%;
+	height:420px;
+	padding-top:20px;
+	margin-left:45px;
+	float:left;
+}
+div.decoration1 img {
+	width:100%;
+	height:100%;
 }
 .sign_up {
-	width:600px;
+	width:46.8%;
 	font-size:18px;
 	margin-left:12%;
 	height:460px;	
+}
+div.decoration2 {
+	width:30%;
+	height:210px;
+	padding-top:200px;
+	margin-right:5%;
+	float:right;
+}
+div.decoration2 img {
+	width:100%;
+	height:100%;
 }
 .sign_in table th {
 	font-size:24px;
@@ -217,6 +237,17 @@ body label[class=msg] {
 	padding-bottom:15px;
 	font-size:18px;
 }
+div.decoration4 {
+	width:35%;
+	height:320px;
+	padding-top:150px;
+	margin-right:8%;
+	float:right;
+}
+div.decoration4 img {
+	width:100%;
+	height:100%;
+}
 .contact span {
 	font-weight:bold;
 }
@@ -228,6 +259,17 @@ body label[class=msg] {
 	margin-left:12%;
 	padding-bottom:15px;
 	font-size:18px;
+}
+div.decoration3 {
+	width:25%;
+	height:300px;
+	padding-top:120px;
+	margin-right:14%;
+	float:right;
+}
+div.decoration3 img {
+	width:100%;
+	height:100%;
 }
 .subscribe form > label {
 	font-weight:bold;
@@ -342,6 +384,20 @@ div.product_info_list ul li {
 	height:420px;
 	margin-left:12%;
 	padding-top:50px;
+}
+.cart_empty h2[class=no_cart] {
+	color:#F60;
+}
+div.decoration5 {
+	width:30%;
+	height:250px;
+	padding-top:150px;
+	margin-right:15%;
+	float:right;
+}
+div.decoration5 img {
+	width:100%;
+	height:100%;
 }
 .cart form > table {
 	border:solid 1px #C6C6C6;
@@ -549,6 +605,7 @@ td.cart_td_name {
 .confirmation table[class=order] img {
 	width:120px;
 	height:100px;
+	padding-left:10PX;
 }
 .confirmation table[class=order] td[class=info] {
 	width:360px;
@@ -563,6 +620,11 @@ td.cart_td_name {
 	width:90px;
 	height:30px;
 	margin-top:10px;
+}
+.confirmation td[class=info] a {
+	text-decoration:none;
+	color:#00C;
+	font-weight:bold;
 }
 .confirm_bottom	{
 	width:220px;
@@ -580,10 +642,16 @@ td.cart_td_name {
 	padding-bottom:15px;
 	font-size:18px;	
 }
-.confirmation_result font {
+.confirmation_result p {
+	font-size:19px;
+}
+.confirmation_result p font {
 	font-size:30px;	
 	font-weight:bold;
 	color:#F00;
+}
+.confirmation_result p span[class=order_number] {
+	color:#F60;
 }
 .confirmation_result div[class=info] {
 	padding-left:200px;
@@ -594,6 +662,20 @@ td.cart_td_name {
 	margin-left:12%;
 	width:950px;
 	font-size:18px;		
+}
+div.decoration6 {
+	width:30%;
+	height:250px;
+	padding-top:150px;
+	margin-right:15%;
+	float:right;
+}
+div.decoration6 img {
+	width:100%;
+	height:100%;
+}
+.my_order h2[class=no_order] {
+	color:#F60;
 }
 .my_order table {
 	width:950px;
