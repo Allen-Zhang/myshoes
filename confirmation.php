@@ -39,9 +39,9 @@
                 for($row = 1; $row <= ROW; $row++){
 
                 echo '<tr>
-                        <td><a href="product_details.php"><img src="images/nike/Nike_Rosherun_Running_Shoe.jpg"></a></td>
+                        <td><a href="product_details.php"><img src="images/shoes/nike/Nike_Rosherun_Running_Shoe.jpg"></a></td>
                         <td class="info">
-                            <a href="product_details.php">Nike_Rosherun_Running_Shoe</a><br/>
+                            <a href="product_details.php">Nike Rosherun Running Shoe</a><br/>
                             Product#: XX<br/>
                             Size: XX
                         </td>

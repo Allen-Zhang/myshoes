@@ -1,3 +1,5 @@
+
+<!-- For users login -->
 <?php
 	session_start();
 
@@ -6,14 +8,17 @@
 	$email = $_POST['email'];
 	$password =  $_POST['password'];
 
-	$sql = "select count(0) userCount, uid from users where email = '$email' and password = '$password'";
+	$sql = "SELECT uid FROM users WHERE email = '$email' AND password = '$password'";
 
 	$result = mysql_query($sql, $conn);
 
-	$row = mysql_fetch_assoc($result);  
+	// Count the number of rows in the result set
+	$user_count = mysql_num_rows($result);
+
+	$row = mysql_fetch_array($result);  
 
 	// Authenticate the user
-	if ($row['userCount'] == 1) {
+	if ($user_count == 1) {
 
 		$_SESSION['uid'] = $row['uid'];
 
@@ -23,7 +28,7 @@
 		
 		$_SESSION['msg'] = "Login failed, please try again.";
 
-		header('Location: ../sign_in.php');  // Login failed, redirect back to sign in page
+		header('Location: ../login.php');  // Login failed, redirect back to login page
 	
 	}
 

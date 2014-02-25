@@ -43,13 +43,16 @@
 
     <div class="discount">
         <div class="dis_right">
-            <a href="product.php"><img src="images/sale/sale_nike.jpg" alt="Discount Product 3"></a>
+            <a href="biz/product_redirect.php?category=sale&title=Nike">
+            <img src="images/sale/sale_nike.jpg" alt="Discount Product 3"></a>
         </div>
         <div class="dis_middle">
-            <a href="product.php"><img src="images/sale/sale_timberland.jpg" alt="Discount Product 2"></a>
+            <a href="biz/product_redirect.php?category=sale&title=Timberland">
+            <img src="images/sale/sale_timberland.jpg" alt="Discount Product 2"></a>
         </div>
         <div class="dis_left">
-            <a href="product.php"><img src="images/sale/sale_adidas.jpg" alt="Discount Product 1"></a>
+            <a href="biz/product_redirect.php?category=sale&title=Adidas">
+            <img src="images/sale/sale_adidas.jpg" alt="Discount Product 1"></a>
         </div>
     </div>
 

@@ -6,7 +6,7 @@
 
 	$result = mysql_query($sql, $conn);
 
-	$row = mysql_fetch_assoc($result);
+	$row = mysql_fetch_array($result);
 
 	// while($row1 = mysql_fetch_array($result)) {
 

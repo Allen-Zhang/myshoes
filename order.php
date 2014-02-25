@@ -2,7 +2,7 @@
 <html>
  <head>
   <meta charset="utf-8" />
-  <title>Orders</title>
+  <title>Order</title>
   <link type="text/css" rel="stylesheet" href="css/main.css"> 
   <link type="text/css" rel="stylesheet" href="css/navigation.css"> 
   <script type="text/javascript" src="js/jquery.js"></script>
@@ -14,7 +14,8 @@
     <!-- Invoke the layout of header -->
     <?php include_once('header.php') ?>
 
-    <?php           
+    <?php 
+        // Determine whether order is empty          
         if(false) {
             echo '<div class="decoration6">
                     <img src="images/decoration/decoration06.jpg">
@@ -26,8 +27,8 @@
 
         <h2>Order History</h2>
 
-        <!-- Determine whether order is empty -->
-        <?php           
+        <?php
+            // Determine whether order is empty            
             if(false) {
 
                 echo '<div class="order_empty">';
@@ -74,11 +75,11 @@
                                     if($row > 1) { echo '<td class="empty_td"></td>'; }
 
                                 echo '<td class="img">
-                                        <a href="product_details.php"><img src="images/nike/Nike_Rosherun_Running_Shoe.jpg"></a>
+                                        <a href="product_details.php"><img src="images/shoes/nike/Nike_Rosherun_Running_Shoes.jpg"></a>
                                       </td>
                                     <td class="shoes_info">
                                         <p><label class="name">
-                                            <a href="product_details.php">Nike_Rosherun_Running_Shoe</a>
+                                            <a href="product_details.php">Nike Rosherun Running Shoe</a>
                                             </label></p>
                                         <p><label>Product#: XX</label></p>
                                         <p><label>Size: XX</label></p>

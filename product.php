@@ -14,36 +14,63 @@
     
     <!-- Products Display -->
     <div class="product">
-        <font>Catagory Name</font>
+
+        <div class="category_title">
+            <font><?php echo $_SESSION['category_title']; ?></font>
+        </div>
+
         <?php
-            define("ROW", 5);
+            // Determine whether product is found
+            if ($_SESSION['product_count'] > 0) {
 
-            echo '<table border="0" width="100%" cellspacing="20">';
+                // Count the number of rows for display
+                $row_count = ceil($_SESSION['product_count'] / 4);
+                $i = 0;
 
-            for($row = 1; $row <= ROW; $row++){
+                echo '<table cellspacing="20">';
 
-                echo '<tr>';
+                for($row = 0; $row < $row_count; $row++){
 
-                for($col = 1; $col <= 4; $col++){
+                    echo '<tr>';
+
+                    for($col = 0; $col < 4; $col++){
 
                         echo '<td>
-                                <div>
-                                    <a href="product_details.php"><img src="images/nike/Nike_Rosherun_Running_Shoe.jpg"></a>
-                                </div>
-                                <div>
-                                  <strong><a href="product_details.php">Nike_Rosherun_Running_Shoe</a></strong><br/>
-                                  Price: <span>$69.00</span>
-                                </div>
+                                <div>';
+
+                                    if(!empty($_SESSION['result'][$i])) {
+                                        echo '<a href="product_details.php?pid='.$_SESSION['result'][$i][0].'">
+                                        <img src="'.$_SESSION['result'][$i][3].'"></a>';
+                                    }
+
+                          echo '</div>
+                                <div>';
+
+                                    if(!empty($_SESSION['result'][$i])) {
+                                        echo '<strong><a href="product_details.php?pid='.$_SESSION['result'][$i][0].'">'.$_SESSION['result'][$i][1].'</a></strong><br/>
+                                            Price: <span>$'.$_SESSION['result'][$i][2].'</span>';
+                                    }
+
+                          echo '</div>
                               </td>';
 
+                        $i++;
+
                     }
+                    echo '</tr>';
+                }              
+                echo '</table>';
 
-                echo '</tr>';
+            } else {
 
-                }
-          
-            echo '</table>';
+                echo '<div class="product_empty">';
+                    echo '<h2 class="no_product">No Products Found.</h2>';
+                    echo '<span>Click </span><a href="index.php">here</a><span> to continue shopping.</span>';
+                echo '</div>';
+
+            }                              
         ?>
+        
     </div>
 
     <!-- Invoke the layout of footer -->

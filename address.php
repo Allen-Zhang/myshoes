@@ -22,6 +22,7 @@
         <h2>Your Delivery Address Information</h2>
 
         <?php
+            // Determine whether exist old addresses
             define("ROW", 2);
 
             for($row = 1; $row <= ROW; $row++){

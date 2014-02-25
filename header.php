@@ -20,17 +20,17 @@
 
     	<!-- User Info -->
         
-        <!-- Determine whether login -->
         <?php
+            // Determine whether login
             if($login) {
 
                echo '<a href="account_info.php">MY ACCOUNT</a>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;';
-               echo '<a href="biz/sign_out.php">SIGN OUT</a>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;';
+               echo '<a href="biz/logout.php">LOG OUT</a>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;';
 
             }
             else {
 
-               echo '<a href="sign_in.php">SIGN IN</a>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;';
+               echo '<a href="login.php">LOG IN</a>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;';
                echo '<a href="sign_up.php">SIGN UP</a>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;';
                
             }
@@ -61,19 +61,19 @@
                 <ul class="subs">
                     <li><a href="#">Brand List 1</a>
                         <ul>
-                            <li><a href="product.php?catagory=adidas">Adidas</a></li>
-                            <li><a href="product.php">Crocs</a></li>
-                            <li><a href="product.php">Dolce &amp; Gabban</a></li>
-                            <li><a href="product.php">Mezlan</a></li>
+                            <li><a href="biz/product_redirect.php?category=brand&title=Adidas">Adidas</a></li>
+                            <li><a href="biz/product_redirect.php?category=brand&title=Crocs">Crocs</a></li>
+                            <li><a href="biz/product_redirect.php?category=brand&title=ECCO">ECCO</a></li>
+                            <li><a href="biz/product_redirect.php?category=brand&title=Mezlan">Mezlan</a></li>
                          
                         </ul>
                     </li>
                     <li><a href="#">Brand List 2</a>
                         <ul>
-                            <li><a href="product.php">Nike</a></li>
-                            <li><a href="product.php">Polo Ralph Lauren</a></li>
-                            <li><a href="product.php">Timberland</a></li>
-                            <li><a href="product.php">Vans</a></li>  
+                            <li><a href="biz/product_redirect.php?category=brand&title=Nike">Nike</a></li>
+                            <li><a href="biz/product_redirect.php?category=brand&title=Polo_Ralph_Lauren">Polo Ralph Lauren</a></li>
+                            <li><a href="biz/product_redirect.php?category=brand&title=Timberland">Timberland</a></li>
+                            <li><a href="biz/product_redirect.php?category=brand&title=Vans">Vans</a></li>  
                         </ul>
                     </li>
                 </ul>
@@ -84,22 +84,22 @@
                 <ul class="subs">
                     <li><a href="#">Style List 1</a>
                         <ul>
-                            <li><a href="product.php">Athletic</a></li>
-                            <li><a href="product.php">Boots</a></li>
-                            <li><a href="product.php">Flip Flops</a></li>
+                            <li><a href="biz/product_redirect.php?category=style&title=Athletic">Athletic</a></li>
+                            <li><a href="biz/product_redirect.php?category=style&title=Boots">Boots</a></li>
+                            <li><a href="biz/product_redirect.php?category=style&title=Flip_Flops">Flip Flops</a></li>
                         </ul>
                     </li>
                     <li><a href="#">Style List 2</a>
                         <ul>
-                            <li><a href="product.php">Oxfords</a></li>
-                            <li><a href="product.php">Sandals</a></li>
-                            <li><a href="product.php">Sneakers</a></li>
+                            <li><a href="biz/product_redirect.php?category=style&title=Oxfords">Oxfords</a></li>
+                            <li><a href="biz/product_redirect.php?category=style&title=Sandals">Sandals</a></li>
+                            <li><a href="biz/product_redirect.php?category=style&title=Sneakers">Sneakers</a></li>
                         </ul>
                     </li>
                 </ul>
             </li>
 
-            <li><a href="product.php">New Arrivals</a></li>
+            <li><a href="biz/product_redirect.php?category=new_arrivals">New Arrivals</a></li>
 
             <li><a href="subscribe.php">Subscribe</a></li>
 

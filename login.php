@@ -2,7 +2,7 @@
 <html>
  <head>
   <meta charset="utf-8" />
-  <title>Sign In</title>
+  <title>Login</title>
   <link type="text/css" rel="stylesheet" href="css/main.css"> 
   <link type="text/css" rel="stylesheet" href="css/navigation.css"> 
  </head>
@@ -16,7 +16,7 @@
         <img src="images/decoration/decoration01.jpg">
     </div>
     
-    <div class="sign_in">
+    <div class="login">
         <form action="biz/authenticate.php" method="post">
             <table>
                 <tr>
@@ -50,7 +50,7 @@
                     <td><input type="password" name="password" id="password" placeholder="Password" required></td>
                 </tr>
             </table>
-            <input type="submit" name="sign_in" value="Sign in">     
+            <input type="submit" name="login" value="Login">     
         </form>
 
         <span>Not a registered user?  </span><a href="sign_up.php"> Sign up now!</a>

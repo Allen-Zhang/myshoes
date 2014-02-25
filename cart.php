@@ -14,7 +14,8 @@
     <!-- Invoke the layout of header -->
     <?php include_once('header.php') ?>
 
-    <?php           
+    <?php   
+        // Determine whether cart is empty        
         if(false) {
             echo '<div class="decoration5">
                     <img src="images/decoration/decoration05.jpg">
@@ -26,8 +27,8 @@
 
         <h2>My Shopping Cart</h2>
 
-        <!-- Determine whether cart is empty -->
         <?php
+            // Determine whether cart is empty 
             if(false) {
 
                 echo '<div class="cart_empty">';
@@ -56,18 +57,18 @@
 
                         echo '<tr>';
                             echo '<td class="cart_td_img">
-                                    <a href="product_details.php"><img src="images/nike/Nike_Rosherun_Running_Shoe.jpg"></a>
+                                    <a href="product_details.php"><img src="images/shoes/nike/Nike_Rosherun_Running_Shoes.jpg"></a>
                                   </td>';
                             echo '<td class="cart_td_name">
                                     <label class="name">
-                                        <a href="product_details.php">Nike_Rosherun_Running_Shoe</a>
+                                        <a href="product_details.php">Nike Rosherun Running Shoe</a>
                                     </label><br/>
                                     <label>Product#: XX</label><br/>
                                     <label>Size: XX</label>
                                   </td>';
                             echo '<td class="cart_quantity">
                                     <form action="#" method="post">
-                                        <input type="text" name="quantity" value="1" required>&nbsp;
+                                        <input type="text" name="quantity" value="1" maxlength="2" required>&nbsp;
                                         <input type="submit" value="Update">
                                     </form>
                                   </td>';

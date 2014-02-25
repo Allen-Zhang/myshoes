@@ -155,8 +155,8 @@ font.section_title {
 	color:#F60;
 }
 
-/* Sign In and Sign Up Page */
-.sign_in {
+/* Login and Sign Up Page */
+.login {
 	width:25%;
 	font-size:20px;
 	padding-top:45px;
@@ -191,14 +191,14 @@ div.decoration2 img {
 	width:100%;
 	height:100%;
 }
-.sign_in table th {
+.login table th {
 	font-size:24px;
 }
 .sign_up form {
 	font-size:20px;
 	margin-left:70px;
 }
-.sign_in table {
+.login table {
 	height:300px;
 }
 .sign_up table  {
@@ -208,10 +208,10 @@ div.decoration2 img {
 .sign_up table td {
 	width:180px;
 }
-.sign_in table label, .sign_up table label {	
+.login table label, .sign_up table label {	
 	font-weight:bold;
 }
-.sign_in table input {
+.login table input {
 	width:280px;
 	height:23px;
 }
@@ -219,7 +219,7 @@ div.decoration2 img {
 	width:300px;
 	height:23px;
 }
-.sign_in > form > input, .sign_up > form div > input {
+.login > form > input, .sign_up > form div > input {
 	margin-top:10px;
 	width:85px;
 	height:30px;
@@ -289,11 +289,19 @@ div.decoration3 img {
 .product {
 	padding-top:5px;
 	padding-bottom:5px;
+	font-size:18px;
 }
-.product font {
-	padding-left:30px;
-	font-size:25px;
+.product div[class=category_title] {
+	margin-top:17px;
+}
+.product div[class=category_title] font {
+	margin-left:40px;
+	font-size:33px;
 	font-weight:bold;
+	color:#F60;
+}
+.product table td {
+	width:25%;
 }
 .product img {
 	width:95%;
@@ -309,6 +317,14 @@ div.decoration3 img {
 }
 .product td div + div{
 	text-align:center;
+}
+.my_order h2[class=no_product] {
+	color:#F60;
+}
+.product_empty {
+	height:340px;
+	margin-left:12%;
+	padding-top:50px;
 }
 
 /* Product Details */
@@ -674,9 +690,6 @@ div.decoration6 img {
 	width:100%;
 	height:100%;
 }
-.my_order h2[class=no_order] {
-	color:#F60;
-}
 .my_order table {
 	width:950px;
 	border:solid 1px #C6C6C6;
@@ -733,6 +746,9 @@ div.decoration6 img {
 .my_order td[class=img] img {
 	width:220px;
 	height:180px;
+}
+.my_order h2[class=no_order] {
+	color:#F60;
 }
 .order_empty {
 	height:340px;

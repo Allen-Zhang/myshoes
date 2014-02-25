@@ -1,5 +1,16 @@
 <?php
+    require_once('biz/db.mysql.php');
     require_once('biz/lib.php');
+
+    $pid = $_GET['pid'];
+
+    $sql = "SELECT product_name, list_price, price, desc_one, desc_two, desc_three, amount, image 
+            FROM products 
+            WHERE pid = '$pid'";
+
+    $result = mysql_query($sql, $conn);
+    $row = mysql_fetch_array($result)
+
 ?>
 
 <!DOCTYPE html>
@@ -20,25 +31,26 @@
 
         <!-- Product information Section -->
         <div class="product_info">
-            <h2>Nike_Rosherun_Running_Shoe</h2>
-            <strong>Product #: </strong>
+            <h2><?php echo $row["product_name"]; ?></h2>
+            <strong>Product #: <?php echo $pid; ?></strong>
 
             <hr>
 
             <div class="product_info_list">
-                <p><label>List Price: </label>&nbsp;<span class="price1">$189.99</span></p>
-                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label>Price: <span class="price2">&nbsp;$120.99</span></label></p>
-                <p><label>You Save: </label>&nbsp;<span class="price3">$69.00</span></p>
+                <p><label>List Price: </label>&nbsp;<span class="price1">$<?php echo $row["list_price"]; ?></span></p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <label>Price: <span class="price2">&nbsp;$<?php echo $row["price"]; ?></span></label></p>
+                <p><label>You Save: </label>&nbsp;
+                    <span class="price3">$<?php echo sprintf("%.2f", ($row["list_price"]-$row["price"])); ?></span></p>
 
                 <ul>
-                    <li></li>
-                    <lquantity i></li>
-                    <li></li>
-                    <li></li>
+                    <li><?php echo $row["desc_one"]; ?></li>
+                    <li><?php echo $row["desc_two"]; ?></li>
+                    <li><?php echo $row["desc_three"]; ?></li>
                 </ul>   
 
-                <form>
-                    <label>Quantity: </label><input type="text" name="amount" value="1">
+                <form action="biz/add_to_cart.php" method="post">
+                    <label>Quantity: </label><input type="text" name="amount" value="1" maxlength="2" required>
                     <select  name="quantity" required>
                         <option value="">Select Size:</option>
                             <?php 
@@ -56,7 +68,7 @@
 
         <!-- Product Image Section -->
         <div class="product_img">
-            <img src="images/nike/Nike_Rosherun_Running_Shoe.jpg" alt="Shoes Image">
+             <?php echo '<img src="'.$row["image"].'" alt="Shoes Image">'; ?>
         </div>
 
     </div>
