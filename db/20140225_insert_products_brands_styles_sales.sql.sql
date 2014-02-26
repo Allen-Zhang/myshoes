@@ -269,7 +269,7 @@ DROP TABLE IF EXISTS `subscribers`;
 CREATE TABLE `subscribers` (
   `id` int(10) NOT NULL AUTO_INCREMENT COMMENT 'subscribers id',
   `uid` int(10) NOT NULL COMMENT 'users id',
-  `sub_email` varchar(200) COLLATE utf8_unicode_ci NOT NULL COMMENT 'email for subscriber',
+  `subscribe_email` varchar(200) COLLATE utf8_unicode_ci NOT NULL COMMENT 'email for subscriber',
   PRIMARY KEY (`id`),
   UNIQUE KEY `id_UNIQUE` (`id`),
   KEY `subscribers_fk_1_idx` (`uid`),
@@ -301,7 +301,7 @@ CREATE TABLE `users` (
   `userphone` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`uid`),
   UNIQUE KEY `uid_UNIQUE` (`uid`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -310,7 +310,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'allenzhang@gmail.com','allenzhang','Allen Zhang','6170000001'),(2,'jeffgreen@gmail.com','jeffgreen','Jeff Green','6170000002'),(3,'aa@qq.com','a','aa','aa');
+INSERT INTO `users` VALUES (1,'allenzhang@gmail.com','allenzhang','Allen Zhang','(617)000-0001'),(2,'jeffgreen@gmail.com','jeffgreen','Jeff Green','(617)000-0002');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -323,4 +323,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-02-25 16:02:30
+-- Dump completed on 2014-02-26  0:24:21

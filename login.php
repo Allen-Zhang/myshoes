@@ -17,7 +17,7 @@
     </div>
     
     <div class="login">
-        <form action="biz/authenticate.php" method="post">
+        <form action="biz/user_authenticate.php" method="post">
             <table>
                 <tr>
                     <th>Returning Customers</th>

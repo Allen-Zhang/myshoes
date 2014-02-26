@@ -284,6 +284,27 @@ div.decoration3 img {
 	margin-top:18px;
 	margin-left:358px;
 }
+.subscribe_result {
+	margin-left:12%;
+	width:810px;
+	height:440px;
+	padding-bottom:15px;
+	font-size:18px;	
+}
+.subscribe_result p {
+	font-size:19px;
+}
+.subscribe_result p font {
+	font-size:30px;	
+	font-weight:bold;
+	color:#F00;
+}
+.subscribe_result div[class=result_info] {
+	padding-left:200px;
+}
+.subscribe_result p span[class=subscriber] {
+	color:#F60;
+}
 
 /* Product */
 .product {
@@ -669,7 +690,7 @@ td.cart_td_name {
 .confirmation_result p span[class=order_number] {
 	color:#F60;
 }
-.confirmation_result div[class=info] {
+.confirmation_result div[class=result_info] {
 	padding-left:200px;
 }
 

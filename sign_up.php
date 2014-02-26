@@ -21,7 +21,7 @@
                     
         <h2>New User Registration</h2>
 
-        <form action="biz/register.php" method="post">
+        <form action="biz/user_register.php" method="post">
 
         <P>Hi, welcome to MyShoes, please enter your name, phone number, email address and password to create your account.</p>
                 

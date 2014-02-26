@@ -25,7 +25,7 @@
             if($login) {
 
                echo '<a href="account_info.php">MY ACCOUNT</a>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;';
-               echo '<a href="biz/logout.php">LOG OUT</a>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;';
+               echo '<a href="biz/user_logout.php">LOG OUT</a>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;';
 
             }
             else {

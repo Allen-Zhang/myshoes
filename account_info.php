@@ -14,6 +14,15 @@
     <!-- Invoke the layout of header -->
     <?php include_once('header.php') ?>
 
+    <?php
+        require_once('biz/db.mysql.php');
+
+        $sql = "SELECT email, password, username, userphone FROM users WHERE uid = ".$_SESSION['uid'];
+        
+        $result = mysql_query($sql, $conn);
+        $row = mysql_fetch_array($result)
+    ?>
+
     <div class="account">
 
         <div class="account_info">
@@ -26,31 +35,35 @@
                 <table>
                     <tr>
                         <td><label>Name:</label></td>
-                        <td>Yingyuan Zhang</td>
+                        <td><?php echo $row['username']; ?></td>
                         <td>
                             <?php
-                                if(true) echo '<a href="edit_name.php"><input type="button" name="edit_name" value="Edit"></a>';
-                                else echo '<a href="edit_name.php"><input type="button" name="edit_name" value="Add"></a>'
+                                if(!empty($row['username'])) 
+                                    echo '<a href="edit_name.php"><input type="button" name="edit_name" value="Edit"></a>';
+                                else 
+                                    echo '<a href="edit_name.php"><input type="button" name="edit_name" value="Add"></a>'
                             ?>
                         </td>
                     </tr>
                     <tr>                       
                         <td><label>E-mail:</label></td>
-                        <td>iloveliverpoolgo@gmail.com</td>
+                        <td><?php echo $row['email']; ?></td>
                         <td><a href="edit_login.php"><input type="button" name="edit_login" value="Edit"></a></td>
                     </tr>
                      <tr>
                         <td><label>Password:</label></td>
-                        <td>*********</td>                       
+                        <td>**********</td>                       
                         <td><a href="edit_login.php"><input type="button" name="edit_login" value="Edit"></a></td>
                     </tr>
                     <tr>
                         <td><label>Phone Number:</label></td>
-                        <td>9176668899</td>
+                        <td><?php echo $row['userphone']; ?></td>
                         <td>
                             <?php
-                                if(true) echo '<a href="edit_phone.php"><input type="button" name="edit_phone" value="Edit"></a>';
-                                else echo '<a href="edit_phone.php"><input type="button" name="edit_phone" value="Add"></a>'
+                                if(!empty($row['userphone'])) 
+                                    echo '<a href="edit_phone.php"><input type="button" name="edit_phone" value="Edit"></a>';
+                                else 
+                                    echo '<a href="edit_phone.php"><input type="button" name="edit_phone" value="Add"></a>'
                             ?>
                         </td>
                     </tr>

@@ -10,7 +10,6 @@
 
     $result = mysql_query($sql, $conn);
     $row = mysql_fetch_array($result)
-
 ?>
 
 <!DOCTYPE html>

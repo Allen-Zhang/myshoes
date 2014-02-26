@@ -8,7 +8,10 @@
 	$email = $_POST['email'];
 	$password =  $_POST['password'];
 	$username = $_POST['username'];
-	$userphone = $_POST['userphone'];
+	$phone = $_POST['userphone'];
+
+	// Format the phone number like (000)000-0000
+	$userphone = sprintf("(%s)%s-%s",substr($phone, 0, 3),substr($phone, 3, 3),substr($phone, 6));
 
 	$sql_check = "SELECT uid FROM users WHERE email = '$email'";
 

@@ -22,11 +22,19 @@
         <p>Join us, our newsletter will weekly deliver straight to your inbox offering the most up-to-date news and shopping guide including the new arrival shoes, the discounted shoes, and other shoes news about MyShoes to enjoy your online shopping. Subscribe to MyShoes for first views of the collection and more.</p><br/><br/>
         
         <p>Enter your email address if you want to receive our newsletter</p>
-        
-        <form action="#" method="post">
+        <?php
+            if (isset($_SESSION['msg'])) {
+
+                echo '<p><label class="msg">'.$_SESSION['msg'].'</label></p>';                    
+
+                unset($_SESSION['msg']); 
+                unset($_SESSION['continue']); 
+            } 
+        ?>
+        <form action="biz/user_subscribe.php" method="post">
             <label>Keep Update With Us:&nbsp;&nbsp;</label>
-            <input type="text" name="sub_email" id="email" placeholder="Your email address here" required><br/>
-            <span><input type="submit" class="subscribe_button" name="subscribe" value="Subscribe"></span>   
+            <input type="text" name="subscribe_email" id="email" placeholder="Your email address here" required><br/>
+            <span><input type="submit" class="subscribe_button" value="Subscribe"></span>   
         </form>
 
     </div>
