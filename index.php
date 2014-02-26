@@ -63,11 +63,21 @@
     <p><font class="section_title">New Arrivals</font></p>
 
     <div class="new_arrivals">
-        <a href="product_details.php"><img src="images/nike/Nike_Rosherun_Running_Shoe.jpg" alt="New Arrivals 1"></a>
-        <a href="product_details.php"><img src="images/nike/Nike_Rosherun_Running_Shoe.jpg" alt="New Arrivals 2"></a>
-        <a href="product_details.php"><img src="images/nike/Nike_Rosherun_Running_Shoe.jpg" alt="New Arrivals 3"></a>
-        <a href="product_details.php"><img src="images/nike/Nike_Rosherun_Running_Shoe.jpg" alt="New Arrivals 4"></a>
-        <a href="product_details.php"><img src="images/nike/Nike_Rosherun_Running_Shoe.jpg" alt="New Arrivals 5"></a>
+        <a href="product_details.php?pid=mysh01010005">
+            <img src="images/shoes/nike/Nike_Downshifter_5_Running_Shoes.jpg" alt="New Arrivals 1">
+        </a>
+        <a href="product_details.php?pid=mysh01010008">
+            <img src="images/shoes/nike/Nike_Hyperdunk_2013_Basketball_Shoes.jpg" alt="New Arrivals 2">
+        </a>
+        <a href="product_details.php?pid=mysh01010011">
+            <img src="images/shoes/nike/Nike_Dual_Fusion_BB_II_Basketball_Shoes.jpg" alt="New Arrivals 3">
+        </a>
+        <a href="product_details.php?pid=mysh01010012">
+            <img src="images/shoes/nike/Nike_Air_Force_1_High_Shoes.jpg" alt="New Arrivals 4">
+        </a>
+        <a href="product_details.php?pid=mysh01010015">
+            <img src="images/shoes/nike/Nike_Air_Force_1_Duckboot_Boot.jpg" alt="New Arrivals 5">
+        </a>
     </div>
 
     <!-- Invoke the layout of footer -->
