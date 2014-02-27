@@ -12,7 +12,7 @@
  <body>
 
     <!-- Invoke the layout of header -->
-    <?php include_once('header.php') ?>
+    <?php include_once('header.php'); ?>
 
     <div class="payment">
         <h2>Your Payment Information</h2><br/>
@@ -80,7 +80,7 @@
     </div>
 
     <!-- Invoke the layout of footer -->
-    <?php include_once('footer.php') ?>
+    <?php include_once('footer.php'); ?>
 
    
  </body>

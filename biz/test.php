@@ -1,4 +1,5 @@
 <?php
+	session_start();
 
 	require_once('db.mysql.php');
 
@@ -31,5 +32,22 @@
 	echo '<br/>';
 
 	print_r($row);
+
+	echo '<br/><br/>';
+
+			$demo = "  ";
+
+			if(isset($demo))
+				echo 'demo is set';
+
+			echo '<br/>';
+
+			if(!empty($demo))
+				echo 'demo is not empty';
+
+			echo '<br/>';
+
+			if($demo == "  ")
+				echo 'demo is a 2 whitespaces string';
 
 ?>

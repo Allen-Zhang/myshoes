@@ -12,15 +12,13 @@
  <body>
 
     <!-- Invoke the layout of header -->
-    <?php include_once('header.php') ?>
+    <?php include_once('header.php'); ?>
 
     <?php
         require_once('biz/db.mysql.php');
-
-        $sql = "SELECT email, password, username, userphone FROM users WHERE uid = ".$_SESSION['uid'];
-        
+        $sql = "SELECT email, password, username, userphone FROM users WHERE uid = ".$_SESSION['uid'];        
         $result = mysql_query($sql, $conn);
-        $row = mysql_fetch_array($result)
+        $row = mysql_fetch_array($result);
     ?>
 
     <div class="account">
@@ -33,6 +31,16 @@
 
             <div>
                 <table>
+                    <?php
+                        if (isset($_SESSION['msg'])) {
+
+                            echo '<tr>
+                                    <td colspan="3"><label class="msg">'.$_SESSION['msg'].'</label></td>
+                                </tr>';                    
+
+                            unset($_SESSION['msg']); 
+                        } 
+                    ?>
                     <tr>
                         <td><label>Name:</label></td>
                         <td><?php echo $row['username']; ?></td>
@@ -41,7 +49,7 @@
                                 if(!empty($row['username'])) 
                                     echo '<a href="edit_name.php"><input type="button" name="edit_name" value="Edit"></a>';
                                 else 
-                                    echo '<a href="edit_name.php"><input type="button" name="edit_name" value="Add"></a>'
+                                    echo '<a href="edit_name.php"><input type="button" name="edit_name" value="Add"></a>';
                             ?>
                         </td>
                     </tr>
@@ -63,7 +71,7 @@
                                 if(!empty($row['userphone'])) 
                                     echo '<a href="edit_phone.php"><input type="button" name="edit_phone" value="Edit"></a>';
                                 else 
-                                    echo '<a href="edit_phone.php"><input type="button" name="edit_phone" value="Add"></a>'
+                                    echo '<a href="edit_phone.php"><input type="button" name="edit_phone" value="Add"></a>';
                             ?>
                         </td>
                     </tr>
@@ -73,12 +81,12 @@
         </div>
 
         <!-- Invoke the layout of account navigation -->
-        <?php include_once('account_nav.php') ?>
+        <?php include_once('account_nav.php'); ?>
        
     </div>
 
     <!-- Invoke the layout of footer -->
-    <?php include_once('footer.php') ?>
+    <?php include_once('footer.php'); ?>
   
  </body>
 </html>

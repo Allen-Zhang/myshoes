@@ -7,12 +7,19 @@
   <link type="text/css" rel="stylesheet" href="css/navigation.css"> 
   <script type="text/javascript" src="js/jquery.js"></script>
   <script type="text/javascript" src="js/ad_slider.js"></script>
+  <script type="text/javascript" src="js/validation.js"></script>
  </head>
 
  <body>
 
     <!-- Invoke the layout of header -->
-    <?php include_once('header.php') ?>
+    <?php include_once('header.php'); ?>
+
+    <?php
+        require_once('biz/db.mysql.php');
+        $result = mysql_query("SELECT email FROM users WHERE uid = ".$_SESSION['uid'], $conn);       
+        $row = mysql_fetch_array($result);
+    ?>  
 
     <div class="account">
 
@@ -27,11 +34,24 @@
                 <p>Use the form below to change the email or password for your MyShoes.com account. 
                    Use the new email or password next time when you log in MyShoes.com.</p>
 
-                <form action="#" method="post">
+                <form action="biz/account_edit.php" method="post">
                     <table>
+                        <?php
+                            if (isset($_SESSION['msg'])) {
+
+                                echo '<tr>
+                                        <td colspan="3"><label class="msg">'.$_SESSION['msg'].'</label></td>
+                                    </tr>';                    
+
+                                unset($_SESSION['msg']); 
+                            } 
+                        ?>
+                        <tr>
+                            <td colspan="3"><label class="msg"><span id="message"></span></label></td>
+                        </tr>
                         <tr>
                            <td><label>Current Email Address:</label></td>
-                           <td>iloveliverpoolgo@gmail.com</td>
+                           <td><?php echo $row['email'];?></td>
                         </tr>
                         <tr>
                            <td><label>Current Password:</label></td>
@@ -43,22 +63,22 @@
                         <tr>
                            <td><label>New Email Address:</label></td>
                            <td>
-                               <input type="email" name="new_email" value="iloveliverpoolgo@gmail.com" required>
+                               <input type="email" name="new_email" value="<?php echo $row['email'];?>" required>
                                <font class="star"> *</font>
                            </td>
                         </tr>
                         <tr>
                            <td><label>New Password:</label></td>
-                           <td><input type="password" name="new_pwd"></td>
+                           <td><input type="password" name="password" id="password"></td>
                         </tr>
                         <tr>
                            <td><label>Confirm New Password:</label></td>
-                           <td><input type="password" name="confirm_new_pwd"></td>
+                           <td><input type="password" name="confirm_password" id="confirm_password" onkeyup="checkPass(); return false;"></td>
                         </tr>
                     </table>
 
                     <div>
-                        <input type="submit" value="Save changes">&nbsp;
+                        <input type="submit" value="Save changes" onclick="return checkPass()">&nbsp;
                         <a href="account_info.php"><input type="button" value="Go back"></a>
                     </div>
                 </form>
@@ -67,12 +87,12 @@
         </div>
 
         <!-- Invoke the layout of account navigation -->
-        <?php include_once('account_nav.php') ?>
+        <?php include_once('account_nav.php'); ?>
        
     </div>
 
     <!-- Invoke the layout of footer -->
-    <?php include_once('footer.php') ?>
+    <?php include_once('footer.php'); ?>
   
  </body>
 </html>

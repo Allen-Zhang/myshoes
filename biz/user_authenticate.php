@@ -25,7 +25,7 @@
 		// Determine whether need to continue other operations
 		if($_SESSION['continue'] == "Continue to subscribe") {
 
-			$_SESSION['msg'] = "Welcome back to subscribe";
+			$_SESSION['msg'] = "Welcome back to subscribe!";
 			
 			header('Location: ../subscribe.php');  // Continue to subscribe
 
@@ -42,7 +42,6 @@
 		header('Location: ../login.php');  // Login failed, redirect back to login page
 	
 	}
-
 	
 ?>
 

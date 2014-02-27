@@ -11,7 +11,9 @@
 	$phone = $_POST['userphone'];
 
 	// Format the phone number like (000)000-0000
-	$userphone = sprintf("(%s)%s-%s",substr($phone, 0, 3),substr($phone, 3, 3),substr($phone, 6));
+	if(!empty($phone)) {
+		$userphone = sprintf("(%s)%s-%s",substr($phone, 0, 3),substr($phone, 3, 3),substr($phone, 6));
+	}
 
 	$sql_check = "SELECT uid FROM users WHERE email = '$email'";
 
@@ -20,7 +22,7 @@
 	// Count the number of rows in the result set
 	$email_count = mysql_num_rows($result_check);
 
-	// Email address already exist
+	// Check whether email address already exists
 	if ($email_count > 0) {
 
 		$_SESSION['msg'] = "Email \"".$email."\" already exists.";

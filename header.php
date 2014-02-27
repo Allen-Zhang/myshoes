@@ -34,7 +34,6 @@
                echo '<a href="sign_up.php">SIGN UP</a>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;';
                
             }
-
         ?>
 
     	<a href="cart.php">CART(0)</a>

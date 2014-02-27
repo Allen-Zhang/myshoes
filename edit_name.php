@@ -12,7 +12,13 @@
  <body>
 
     <!-- Invoke the layout of header -->
-    <?php include_once('header.php') ?>
+    <?php include_once('header.php'); ?>
+
+    <?php
+        require_once('biz/db.mysql.php');
+        $result = mysql_query("SELECT username FROM users WHERE uid = ".$_SESSION['uid'], $conn);       
+        $row = mysql_fetch_array($result);
+    ?>    
 
     <div class="account">
 
@@ -28,12 +34,12 @@
                    you may do so below. Be sure to click the Done button when you are done.</p>
                 <p><label class="title2">What is your new name?</label></p>
 
-                <form action="#" method="post">
+                <form action="biz/account_edit.php" method="post">
                     <table>
                         <tr>
                            <td>
                                <label class="title3">New Name:&nbsp;</label>
-                               <input type="text" name="edit_name" placeholder="Enter your name" required>
+                               <input type="text" name="edit_name" value="<?php echo $row['username'];?>" placeholder="Enter your name" required>
                                <font class="star"> *</font>
                            </td>
                            <td>
@@ -53,7 +59,7 @@
     </div>
 
     <!-- Invoke the layout of footer -->
-    <?php include_once('footer.php') ?>
+    <?php include_once('footer.php'); ?>
   
  </body>
 </html>

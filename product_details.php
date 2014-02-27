@@ -9,7 +9,7 @@
             WHERE pid = '$pid'";
 
     $result = mysql_query($sql, $conn);
-    $row = mysql_fetch_array($result)
+    $row = mysql_fetch_array($result);
 ?>
 
 <!DOCTYPE html>
@@ -24,7 +24,7 @@
  <body>
 
     <!-- Invoke the layout of header -->
-    <?php include_once('header.php') ?>
+    <?php include_once('header.php'); ?>
     
     <div class="product_details">
 
@@ -73,7 +73,7 @@
     </div>
 
     <!-- Invoke the layout of footer -->
-    <?php include_once('footer.php') ?>
+    <?php include_once('footer.php'); ?>
 
  </body>
 </html>

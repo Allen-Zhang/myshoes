@@ -12,7 +12,7 @@
  <body>
 
     <!-- Invoke the layout of header -->
-    <?php include_once('header.php') ?>
+    <?php include_once('header.php'); ?>
 
     <!-- Ad Section -->
     <div id="ad">
@@ -81,7 +81,7 @@
     </div>
 
     <!-- Invoke the layout of footer -->
-    <?php include_once('footer.php') ?>
+    <?php include_once('footer.php'); ?>
 
    
  </body>
