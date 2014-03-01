@@ -5,7 +5,6 @@
   <title>Sign Up</title>
   <link type="text/css" rel="stylesheet" href="css/main.css"> 
   <link type="text/css" rel="stylesheet" href="css/navigation.css"> 
-  <script type="text/javascript" src="js/validation.js"></script>
  </head>
 
  <body>

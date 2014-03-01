@@ -49,8 +49,8 @@
                 </ul>   
 
                 <form action="biz/add_to_cart.php" method="post">
-                    <label>Quantity: </label><input type="text" name="amount" value="1" maxlength="2" required>
-                    <select  name="quantity" required>
+                    <label>Quantity: </label><input type="text" name="quantity" value="1" maxlength="2" required>
+                    <select  name="size" required>
                         <option value="">Select Size:</option>
                             <?php 
                                 foreach ($sizelist as $sizes) {

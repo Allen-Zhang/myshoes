@@ -1,3 +1,7 @@
+<?php
+    require_once('biz/db.mysql.php');
+?>
+
 <!DOCTYPE html>
 <html>
  <head>
@@ -5,8 +9,6 @@
   <title>Edit Phone Number</title>
   <link type="text/css" rel="stylesheet" href="css/main.css"> 
   <link type="text/css" rel="stylesheet" href="css/navigation.css"> 
-  <script type="text/javascript" src="js/jquery.js"></script>
-  <script type="text/javascript" src="js/ad_slider.js"></script>
  </head>
 
  <body>
@@ -15,7 +17,6 @@
     <?php include_once('header.php'); ?>
 
     <?php
-        require_once('biz/db.mysql.php');
         $result = mysql_query("SELECT userphone FROM users WHERE uid = ".$_SESSION['uid'], $conn);       
         $row = mysql_fetch_array($result);
         $userphone = str_replace("-","",str_replace(")","",str_replace("(","",$row['userphone'])));

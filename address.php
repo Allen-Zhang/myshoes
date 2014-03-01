@@ -1,4 +1,5 @@
 <?php
+    require_once('biz/db.mysql.php');
     require_once('biz/lib.php');
 ?>
 
@@ -9,8 +10,6 @@
   <title>Address</title>
   <link type="text/css" rel="stylesheet" href="css/main.css"> 
   <link type="text/css" rel="stylesheet" href="css/navigation.css"> 
-  <script type="text/javascript" src="js/jquery.js"></script>
-  <script type="text/javascript" src="js/ad_slider.js"></script>
  </head>
 
  <body>
@@ -18,40 +17,52 @@
     <!-- Invoke the layout of header -->
     <?php include_once('header.php') ?>
 
+    <?php
+        $sql = "SELECT aid, rec_name, rec_phone, address_line_one, address_line_two, city, state, zip, country 
+                FROM addresses 
+                WHERE uid = ".$_SESSION['uid'];
+        $result = mysql_query($sql, $conn);
+    ?>
+
     <div class="address">
         <h2>Your Delivery Address Information</h2>
 
         <?php
-            // Determine whether exist old addresses
-            define("ROW", 2);
-
-            for($row = 1; $row <= ROW; $row++){
+            while ($row = mysql_fetch_array($result)) {
 
                 echo '<table class="old_address">
                         <tr>
                             <td rowspan="3" class="rec_name">
-                                <label class="name">Yingyuan Zhang</label><br/>
-                                <span>(917)856-6699</span>
+                                <label class="name">'.$row['rec_name'].'</label><br/>
+                                <span>'.$row['rec_phone'].'</span>
                             </td>
                             <td class="address">
-                                22 MOUNT VERNON ST<br/>
-                                BRIGHTON, MA, 02135<br/>
-                                United States
+                                '.$row['address_line_one'].'<br/>';
+
+                            if(!empty($row['address_line_two'])) 
+                                echo $row['address_line_two'].'<br/>';    
+                            
+                            echo $row['city'].', '.$row['state'].', '.$row['zip'].'<br/>
+                                '.$row['country'].'
                             </td>
                             <td rowspan="3" class="button">
                                 <input type="button" name="old_address" value="Ship to this address"><br/>
-                                <input type="button" value="Edit">
-                                <input type="button" value="Remove">
+                                <a href="edit_address_book.php?aid='.$row['aid'].'&page=address">
+                                    <input type="button" value="Edit">
+                                </a>
+                                <a href="biz/address_delete.php?aid='.$row['aid'].'&page=address">
+                                    <input type="button" value="Remove">
+                                </a>
                             </td>
                         </tr>
-                    </table>';
-
+                    </table>';                        
             }
+
         ?>
 
         <h3>Add A New Address:</h3>
 
-        <form action="payment.php" method="post">
+        <form action="biz/address_add.php" method="post">
             <table class="new_address">
                 <tr>
                     <td><label>Full Name:</label></td>
@@ -71,7 +82,7 @@
                 <tr>
                     <td><label>Address Line2:</label></td>
                     <td><input type="text" name="address_line2" 
-                        placeholder="Apartment, suite, unit, building, floor, etc." required><font class="star"> *</font></td>
+                        placeholder="Apartment, suite, unit, building, floor, etc."></td>
                 </tr>
                 <tr>
                     <td><label>City:</label></td>
@@ -102,6 +113,7 @@
                 </tr>          
             </table>
             <div>
+                <input type="hidden" name="page" value="address">
                 <input type="submit" name="new_address" value="Ship to this address">
             </div>
         </form>

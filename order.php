@@ -5,8 +5,6 @@
   <title>Order</title>
   <link type="text/css" rel="stylesheet" href="css/main.css"> 
   <link type="text/css" rel="stylesheet" href="css/navigation.css"> 
-  <script type="text/javascript" src="js/jquery.js"></script>
-  <script type="text/javascript" src="js/ad_slider.js"></script>
  </head>
 
  <body>

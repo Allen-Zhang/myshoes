@@ -36,7 +36,7 @@
 
 		mysql_query($sql_insert, $conn);
 
-		// Fetch new user's id
+		// Fetch new user id
 		$_SESSION['uid'] = mysql_insert_id($conn);
 
 		header('Location: ../index.php');  // Sign up successfully, redirect to home page

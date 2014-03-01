@@ -19,7 +19,6 @@
     <div class="header_info">
 
     	<!-- User Info -->
-        
         <?php
             // Determine whether login
             if($login) {
