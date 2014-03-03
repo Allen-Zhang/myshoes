@@ -20,10 +20,11 @@ function checkPass() {
 			}
 	
 		} else {
-			confirm_password.style.backgroundColor = "red";
+			confirm_password.style.backgroundColor = "#F90";
 			message.style.color = "red";
 			message.innerHTML = "Passwords do not match!";
 			return false;
 			
 		}
 }
+

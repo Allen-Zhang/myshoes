@@ -35,7 +35,7 @@
             }
         ?>
 
-    	<a href="cart.php">CART(0)</a>
+    	<a href="cart.php">MY CART</a>
 
     	<br/>
     
