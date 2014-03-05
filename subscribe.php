@@ -27,8 +27,7 @@
 
                 echo '<p><label class="msg">'.$_SESSION['msg'].'</label></p>';                    
 
-                unset($_SESSION['msg']); 
-                unset($_SESSION['continue']); 
+                unset($_SESSION['msg']);  
             } 
         ?>
         <form action="biz/user_subscribe.php" method="post">

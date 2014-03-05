@@ -12,6 +12,11 @@
     <!-- Invoke the layout of header -->
     <?php include_once('header.php'); ?>
 
+    <?php
+        if(isset($_GET['aid']))
+            $_SESSION['aid'] = $_GET['aid'];
+    ?>
+
     <div class="payment">
         <h2>Your Payment Information</h2><br/>
 

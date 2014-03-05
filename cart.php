@@ -21,14 +21,16 @@
         // If user is logged in
         if(isset($_SESSION['uid'])) {
 
-            $sql = "SELECT carts.pid, size, quantity, product_name, price, image FROM carts, products 
-                    WHERE carts.pid = products.pid AND uid = ".$_SESSION['uid'];
+            $sql = "SELECT carts.pid, size, quantity, product_name, price, image, cid 
+                    FROM carts, products 
+                    WHERE carts.pid = products.pid AND uid = ".$_SESSION['uid'];                                       
             $result = mysql_query($sql, $conn);
             $cart_count = mysql_num_rows($result);
+
         }
 
         // Determine whether cart is empty        
-        if(empty($cart_count) && !isset($_SESSION['pid'])) {
+        if(empty($cart_count) && empty($_SESSION['pid'])) {
             echo '<div class="decoration5">
                     <img src="images/decoration/decoration05.jpg">
                   </div>';
@@ -41,7 +43,6 @@
 
         <?php
             $subtotal = 0.00;
-            $edit_qty = 0;
             $i = 0;
 
             // Determine whether cart is empty 
@@ -49,7 +50,9 @@
             /* For logged-in user */
             if(!empty($cart_count)) {
 
-              echo '<form action="address.php" method="post">
+              $cid_record = "";  // If cart is not empty, initiate a variable to record all cids
+
+              echo '<form action="biz/cart_submit.php" method="post">
                       <table rules=rows>
                         <tr class="cart_th">
                           <th colspan="2">SHOES</th>
@@ -60,6 +63,12 @@
                         </tr>';
 
               while ($row = mysql_fetch_array($result)) {
+
+                // Record all cids in cid_record variable
+                if($cid_record == "")
+                  $cid_record = $row['cid'];
+                else 
+                  $cid_record = $cid_record.','.$row['cid'];  
 
                 $total = sprintf("%.2f", ($row[4] * $row[2]));
                 $subtotal = sprintf("%.2f", ($subtotal + $total)); 
@@ -116,15 +125,17 @@
                           <td><label class="order_total">$'.$order_total.'</label></td>
                         </tr>
                       </table>
+                      <input type="hidden" name="carts" value="'.$cid_record.'">
+                      <input type="hidden" name="total" value="'.$order_total.'">
                       <input type="submit" value="Checkout">
                       <a href="index.php"><input type="button" value="Continue Shopping"></a>  
                     </div>   
                     </form>';
 
             /* For non-logged-in user */
-            } elseif (isset($_SESSION['pid'])) {
+            } elseif (!empty($_SESSION['pid'])) {
               
-                echo '<form action="address.php" method="post">
+                echo '<form action="biz/cart_submit.php" method="post">
                         <table rules=rows>
                           <tr class="cart_th">
                             <th colspan="2">SHOES</th>
@@ -197,6 +208,7 @@
                             <td><label class="order_total">$'.$order_total.'</label></td>
                           </tr>
                         </table>
+                        <input type="hidden" name="total" value="'.$order_total.'">
                         <input type="submit" value="Checkout">
                         <a href="index.php"><input type="button" value="Continue Shopping"></a>  
                       </div>   

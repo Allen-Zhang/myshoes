@@ -22,9 +22,9 @@
      $sql_update = "UPDATE addresses 
                     SET rec_name = '$rec_name', rec_phone = '$rec_phone', address_line_one = '$address_line1', 
                         address_line_two = '$address_line2', city = '$city', state = '$state', zip = '$zip', country = '$country' 
-                    WHERE aid = '$aid' AND uid = ".$_SESSION['uid'] or die(mysql_error()); 
+                    WHERE aid = '$aid' AND uid = ".$_SESSION['uid']; 
  
-    mysql_query($sql_update, $conn);
+    mysql_query($sql_update, $conn) or die(mysql_error());
 
     // Determine which page should go after updating
     

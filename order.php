@@ -1,3 +1,7 @@
+<?php
+    require_once('biz/db.mysql.php');
+?>
+
 <!DOCTYPE html>
 <html>
  <head>
@@ -13,8 +17,14 @@
     <?php include_once('header.php'); ?>
 
     <?php 
+        // Fetch data from orders table
+        $sql_order = "SELECT order_num, aid, created_date, estimated_date, total, status  
+                      FROM orders WHERE uid = ".$_SESSION['uid'];
+        $result_order = mysql_query($sql_order, $conn);
+        $order_count = mysql_num_rows($result_order);
+          
         // Determine whether order is empty          
-        if(false) {
+        if(empty($order_count)) {
             echo '<div class="decoration6">
                     <img src="images/decoration/decoration06.jpg">
                 </div>';
@@ -27,7 +37,7 @@
 
         <?php
             // Determine whether order is empty            
-            if(false) {
+            if(empty($order_count)) {
 
                 echo '<div class="order_empty">';
                     echo '<h2 class="no_order">No Orders Found.</h2>';
@@ -37,60 +47,84 @@
             }
             else {
 
-                define("QTY", 3);
-                define("ROW", 2);
-
                 // Display all of the order information
-                for($order_quantity = 1; $order_quantity <= QTY; $order_quantity++) {
+                while ($order = mysql_fetch_array($result_order)) {
+
+                    // Fetch data from address table
+                    $sql_address = "SELECT rec_name, rec_phone, address_line_one, address_line_two, city, state, zip, country 
+                                    FROM addresses WHERE aid = '".$order['aid']."'";
+                    $result_address = mysql_query($sql_address, $conn);
+                    $address = mysql_fetch_array($result_address);
 
                     echo '<table>
                             <tr>
                                 <td class="info" rowspan="2">
                                     <p><label>ORDER PLACED</label></p>
-                                    <p><label class="date">January 14, 2014</label></p>
-                                    <p><label>ORDER#: XXXXXXXX</label></p>
-                                    <p><label>RECIPIENT: Yingyuan Zhang</label></p>
-                                    <p><label>PHONE NUMBER: 9178888888</label></p>
+                                    <p><label class="date">'.date('F j, Y',strtotime($order['created_date'])).'</label></p>
+                                    <p><label>ORDER#: '.$order['order_num'].'</label></p>
+                                    <p><label>RECIPIENT: '.$address['rec_name'].'</label></p>
+                                    <p><label>PHONE NUMBER: '.$address['rec_phone'].'</label></p>
                                     <p><label>DELIVERY ADDRESS:</label></p>
                                     <ul>
-                                        <li>5830 85TH ST FL1</li>
-                                        <li>MIDDLE VILLAGE, NY, 11379</li>
-                                        <li>United States</li>
+                                        <li>'.$address['address_line_one'].'</li>';
+                                if(!empty($address['address_line_one'])) {
+                                    echo '<li>'.$address['address_line_two'].'</li>'; 
+                                }    
+                                  echo '<li>'.$address['city'].', '.$address['state'].', '.$address['zip'].',</li>
+                                        <li>'.$address['country'].'</li>
                                     </ul>
-                                    <label>TOTAL: <span class="total">$100.00</span></label>
+                                    <label>TOTAL: <span class="total">$'.$order['total'].'</span></label>
                                 </td>
                                 <td class="status" colspan="2">
-                                    <p><label>ESTIMATED DELIVERED ON <span class="del_date">Friday, January 17, 2014</span></label></p>
-                                    <p><label class="status">Delivered</label></p>
+                                    <p><label>ESTIMATED DELIVERED ON 
+                                       <span class="del_date">'.date('l, F j, Y',strtotime($order['estimated_date'])).'</span>
+                                       </label>
+                                    </p>
+                                    <p><label class="status">'.$order['status'].'</label></p>
                                 </td>
                             </tr>';
 
-                        for($row = 1; $row <= ROW; $row++){
+                    // Fetch data from order_details table
+                    $sql_detail = "SELECT pid, size, quantity 
+                                   FROM order_details WHERE order_num = '".$order['order_num']."'";
+                    $result_detail = mysql_query($sql_detail, $conn);
 
-                            echo '<tr>';
+                    $row = 0;
 
-                                    // Add a empty td from the second line
-                                    if($row > 1) { echo '<td class="empty_td"></td>'; }
+                    while ($detail = mysql_fetch_array($result_detail)) {
+
+                        $row++;
+                        // Fetch data from products table
+                        $sql_product = "SELECT product_name, image 
+                                       FROM products WHERE pid = '".$detail['pid']."'";
+                        $result_product = mysql_query($sql_product, $conn);
+                        $product = mysql_fetch_array($result_product);
+
+                        echo '<tr>';
+                            // Add a empty td from the second line
+                            if($row > 1) { echo '<td class="empty_td"></td>'; }
 
                                 echo '<td class="img">
-                                        <a href="product_details.php"><img src="images/shoes/nike/Nike_Rosherun_Running_Shoes.jpg"></a>
+                                        <a href="product_details.php?pid='.$detail['pid'].'">
+                                            <img src="'.$product['image'].'">
+                                        </a>
                                       </td>
                                     <td class="shoes_info">
+
                                         <p><label class="name">
-                                            <a href="product_details.php">Nike Rosherun Running Shoe</a>
+                                            <a href="product_details.php?pid='.$detail['pid'].'">'.$product['product_name'].'</a>
                                             </label></p>
-                                        <p><label>Product#: XX</label></p>
-                                        <p><label>Size: XX</label></p>
                                         <p><label>Sold by MyShoes.com</label></p>
+                                        <p><label><strong>Product#: </strong>'.$detail['pid'].'</label></p>
+                                        <p><label><strong>Size: </strong>'.$detail['size'].'</label></p>
+                                        <p><label><strong>Quantity: </strong>'.$detail['quantity'].'</label></p>
+                                        
                                     </td>
                                 </tr>';
-                        }
-
-                        echo '</table>';
+                    }
+                    echo '</table>';
                 } 
-
                 echo '<div class="order_back"><a href="account_info.php"><input type="button" value="Go back"></a></div>';
-
             }
         ?>
 

@@ -33,9 +33,9 @@
 		} else {
 
 			$sql_insert = "INSERT INTO subscribers (uid, subscribe_email) 
-						   VALUES (".$_SESSION['uid'].", '$subscribe_email')" or die(mysql_error());
+						   VALUES (".$_SESSION['uid'].", '$subscribe_email')";
 
-			mysql_query($sql_insert, $conn);
+			mysql_query($sql_insert, $conn) or die(mysql_error());
 
 			$_SESSION['subscriber'] = $subscribe_email;
 

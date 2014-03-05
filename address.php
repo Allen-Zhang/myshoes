@@ -46,7 +46,9 @@
                                 '.$row['country'].'
                             </td>
                             <td rowspan="3" class="button">
-                                <input type="button" name="old_address" value="Ship to this address"><br/>
+                                <a href="payment.php?aid='.$row['aid'].'">
+                                    <input type="button" name="old_address" value="Ship to this address">
+                                </a><br/>
                                 <a href="edit_address_book.php?aid='.$row['aid'].'&page=address">
                                     <input type="button" value="Edit">
                                 </a>

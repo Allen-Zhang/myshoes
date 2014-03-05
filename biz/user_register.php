@@ -32,9 +32,9 @@
 	} else {
 
 		$sql_insert = "INSERT INTO users (email, password, username, userphone) 
-					   VALUES ('$email', '$password', '$username', '$userphone')" or die(mysql_error());
+					   VALUES ('$email', '$password', '$username', '$userphone')";
 
-		mysql_query($sql_insert, $conn);
+		mysql_query($sql_insert, $conn) or die(mysql_error());
 
 		// Fetch new user id
 		$_SESSION['uid'] = mysql_insert_id($conn);

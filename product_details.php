@@ -2,7 +2,7 @@
     require_once('biz/db.mysql.php');
     require_once('biz/lib.php');
 
-    $pid = str_replace("'", "", $_GET['pid']);
+    $pid = $_GET['pid'];
 
     $sql = "SELECT product_name, list_price, price, desc_one, desc_two, desc_three, amount, image 
             FROM products 

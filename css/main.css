@@ -437,8 +437,8 @@ div.decoration5 img {
 	width:100%;
 	height:100%;
 }
-form[action="address.php"] table {
-	width:100%;
+form[action="biz/cart_submit.php"] table {
+	width:98%;
 	scellspacing:1px;
 }
 .cart form > table {
@@ -451,6 +451,7 @@ form[action="address.php"] table {
 td.cart_td {	
 	text-align:center;
 	width:130px;
+	padding-right:15px;
 }
 td.cart_td input[type=button] {	
 	width:80px;
@@ -472,13 +473,13 @@ td.cart_td_img {
 	padding-left:10px;
 }
 .cart_td_img img {
-	padding-left:5px;
-	width:182px;
+	padding-left:10px;
+	width:185px;
 	height:150px;
 }
 td.cart_td_name {
-	width:280px;
-	padding-left:5px;
+	width:240px;
+	padding-left:15px;
 }
 .cart_bottom {
 	width:255px;
@@ -506,7 +507,7 @@ td.cart_td_name {
 	color:#00C;
 	font-weight:bold;
 }
-.cart_bottom label[class=order_total] {
+label[class=order_total] {
 	color:#F00;	
 }
 
@@ -633,39 +634,57 @@ table.old_address a {
 /* Confirmation */
 .confirmation {
 	margin-left:12%;
-	width:900px;
-	padding-bottom:15px;
-	font-size:18px;	
+	width:75%;
+	padding-bottom:10px;
+	font-size:18px;
 }
-.confirmation h2, .confirmation div[class=p] {
-	margin-bottom:40px;
+.confirmation h2 {
+	margin-bottom:20px;
 }
-
-.confirmation label {
+.confirmation div[class="con_info"] label {
 	font-weight:bold;
 }
-.confirmation table[class=order] {
-	border:solid 1px #C6C6C6;
+.confirmation div[class="con_info"] ul {
+	margin-left:45px;
+	font-size:19px;
+	list-style:none;
+	line-height:35px;
 }
-.confirmation table[class=order] td {
+.confirmation li[class="desc"] {
+	padding-left:108px;
+}
+.confirmation table[class=order] {
+	margin-left:83px;
+	border:solid 1px #C6C6C6;
+	width:790px;
+}
+.confirmation td[class=td_img] {
+	width:120px;
+}
+.confirmation td[class=td_qty] {
+	width:120px;
+}
+.confirmation td[class=td_price] {
 	width:140px;
+	padding-right:15px;
 }
 .confirmation table[class=order] img {
 	width:120px;
 	height:100px;
-	padding-left:10PX;
+	padding-left:20PX;
 }
 .confirmation table[class=order] td[class=info] {
-	width:360px;
+	width:280px;
+	padding-left:10px;
 }
 .confirmation table[class=price] {
-	margin-top:10px;
+	margin-top:5px;
 }
 .confirmation table[class=price] td {
 	width:130px;
 }
 .confirmation input[type=submit] {	
-	width:90px;
+	width:95px;
 	height:30px;
 	margin-top:10px;
 }
@@ -678,10 +697,14 @@ table.old_address a {
 	width:220px;
 	padding-top:15px;
 	padding-bottom:10px;
-	padding-left:60%;
+	padding-left:70%;
+}
+.confirm_bottom label {
+	font-weight:bold;
 }
 .confirm_bottom div {
 	text-align:right;
+	margin-right:35px;
 }
 .confirmation_result {
 	margin-left:12%;

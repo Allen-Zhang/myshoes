@@ -1,3 +1,7 @@
+<?php
+    require_once('biz/db.mysql.php');
+?>
+
 <!DOCTYPE html>
 <html>
  <head>
@@ -18,17 +22,28 @@
 
         <div class="result_info">
             <?php
-                if(true) {
+                if($_SESSION['msg'] == "Successful") {
 
-                    echo '<p><font>You order is paid successfully!</font></p>';
-                    echo '<p>Order Number: <span class="order_number">105-0226438-4661002</span></p>
-                          <p>Estimated Delivery: January 14, 2014</p>
-                          <p><a href="order.php">Review your order</a></p>';
+                  unset($_SESSION['msg']);
+
+                  $oid = $_GET['oid'];
+
+                  $sql = "SELECT order_num, estimated_date FROM orders WHERE oid = '$oid'";
+                  $result = mysql_query($sql, $conn);
+                  $row = mysql_fetch_array($result);
+                  $date = date('l, F j, Y',strtotime($row[1]));  // Change the estimated deliveried date format
+
+                  echo '<p><font>You order is paid successfully!</font></p>
+                        <p><strong>Order Number:</strong>&nbsp;&nbsp;<span class="order_number">'.$row[0].'</span></p>
+                        <p><strong>Estimated Delivery:</strong>&nbsp;&nbsp;'.$date.'</p>
+                        <p><a href="order.php">Review your order</a></p>';
 
                 }
                 else {
 
-                    echo '<p><font>Sorry, your order payment failed. <br>Please try again.</font></p>';
+                  unset($_SESSION['msg']);
+                  
+                  echo '<p><font>Sorry, your order payment failed. <br>Please try again.</font></p>';
 
                 }
             ?>

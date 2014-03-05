@@ -19,9 +19,9 @@
     $country = $_POST['country'];
 
     $sql_insert = "INSERT INTO addresses (uid, rec_name, rec_phone, address_line_one, address_line_two, city, state, zip, country) 
-                       VALUES (".$_SESSION['uid'].", '$rec_name', '$rec_phone', '$address_line1', '$address_line2', '$city', '$state', '$zip', '$country')" or die(mysql_error());
+                       VALUES (".$_SESSION['uid'].", '$rec_name', '$rec_phone', '$address_line1', '$address_line2', '$city', '$state', '$zip', '$country')";
 
-    mysql_query($sql_insert, $conn);
+    mysql_query($sql_insert, $conn) or die(mysql_error());
 
     // Determine which page invokes this function
     

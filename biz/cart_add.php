@@ -15,11 +15,9 @@
     if(isset($_SESSION['uid'])) {
 
         $sql_insert = "INSERT INTO carts (uid, pid, size, quantity) 
-                       VALUES (".$_SESSION['uid'].", '$pid', \"$size\", '$qty')" or die(mysql_error());
+                       VALUES (".$_SESSION['uid'].", '$pid', \"$size\", '$qty')";
 
-        mysql_query($sql_insert, $conn);
-
-        // $_SESSION['cid'] = mysql_insert_id($conn);
+        mysql_query($sql_insert, $conn) or die(mysql_error());
 
         header('Location: ../cart.php');  // Add to cart successfully, redirect to cart page
 
@@ -70,7 +68,7 @@
 
                 $_SESSION['msg'] ="Add to cart failed, please try again.";
 
-                header("Location: ../product_details.php?pid='$pid'");  // Add to cart failed, redirect to product detail page
+                header("Location: ../product_details.php?pid=$pid");  // Add to cart failed, redirect to product detail page
 
             }
 
