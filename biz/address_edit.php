@@ -41,7 +41,7 @@
         // Fetch new address id
         $_SESSION['aid'] = $aid;
 
-        header('Location: ../payment.php');  // Delivery address edit successfully, redirect to payment page
+        header('Location: ../payment.php?step=next');  // Delivery address edit successfully, redirect to payment page
 
     } else {
 

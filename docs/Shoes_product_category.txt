@@ -12,13 +12,19 @@ Brands:
 
 Nike (Athletic, Sneakers, Flip Flops)
 Adidas  (Athletic, Sneakers, Flip Flops)
+Reebok (Athletic)
+New Balance (Athletic)
 
 Timberland (Boots) 
 
+Converse (Sneakers)
+New Balance (Sneakers)
 Vans (Sneakers)
 Polo Ralph Lauren (Sneakers)
 
 Crocs (Sandals)
 
+
+Dockers (Oxfords)
 ECCO (Oxfords)
 Mezlan (Oxfords)

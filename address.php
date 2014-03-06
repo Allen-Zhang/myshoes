@@ -1,8 +1,12 @@
 <?php
     require_once('biz/db.mysql.php');
     require_once('biz/lib.php');
-?>
 
+    if(empty($_GET['step'])) {
+        header('Location: index.php');  // Illegal access, redirect to main page
+        exit;
+    }
+?>
 <!DOCTYPE html>
 <html>
  <head>
@@ -15,7 +19,10 @@
  <body>
 
     <!-- Invoke the layout of header -->
-    <?php include_once('header.php') ?>
+    <?php include_once('header.php'); ?>
+
+    <!-- Validate user login -->
+    <?php include_once('biz/validation.php'); ?>
 
     <?php
         $sql = "SELECT aid, rec_name, rec_phone, address_line_one, address_line_two, city, state, zip, country 
@@ -46,7 +53,7 @@
                                 '.$row['country'].'
                             </td>
                             <td rowspan="3" class="button">
-                                <a href="payment.php?aid='.$row['aid'].'">
+                                <a href="payment.php?aid='.$row['aid'].'&step=next">
                                     <input type="button" name="old_address" value="Ship to this address">
                                 </a><br/>
                                 <a href="edit_address_book.php?aid='.$row['aid'].'&page=address">
@@ -123,7 +130,7 @@
     </div>
 
     <!-- Invoke the layout of footer -->
-    <?php include_once('footer.php') ?>
+    <?php include_once('footer.php'); ?>
 
    
  </body>

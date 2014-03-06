@@ -2,9 +2,14 @@
 <!-- MySQL Database Connection -->
 <?php
 
-	$conn = mysql_connect("127.0.0.1", "root", "root") or die("Unable to connect" . mysql_error());
+	$host = "127.0.0.1"; 
+	$user = "user"; 
+	$password = "password"; 
+	$dbname = "myshoes"; 
 
-	mysql_select_db("myshoes", $conn) or die("Unable to connect to myshoes database");
+	$conn = mysql_connect($host, $user, $password) or die("Unable to connect" . mysql_error());
+
+	mysql_select_db($dbname, $conn) or die("Unable to connect to myshoes database");
 
 ?>
 

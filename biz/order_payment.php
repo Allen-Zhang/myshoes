@@ -23,8 +23,9 @@
     $oid = mysql_insert_id($conn);
 
     /* 
-    * Create corresponding order details for the order
-    * and delete the corresponding records in carts 
+    * Create corresponding order details for the order,
+    * delete the corresponding records in carts,
+    * and update corresponding amount in products 
     */
     $cart = explode(",", $carts); 
 
@@ -38,6 +39,16 @@
         $insert_order_detail = "INSERT INTO order_details (order_num, pid, size, quantity) 
                                 VALUES ('$order_num', '$row[0]', \"$row[1]\", '$row[2]')";
         mysql_query($insert_order_detail, $conn) or die(mysql_error());
+
+
+        // Update amount in products table
+        $result_amount = mysql_query("SELECT amount FROM products WHERE pid = '$row[0]'", $conn);
+        $rowt_amount = mysql_fetch_array($result_amount);
+        $left =  $rowt_amount['amount'] - $row['quantity'];
+
+        if($left > 0) {
+            mysql_query("UPDATE products SET amount = '$left' WHERE pid = '$row[0]'", $conn) or die(mysql_error()); 
+        }
 
         // Delete cart items
         $delete_cart = "DELETE FROM carts WHERE cid = ".$cart[$i];
@@ -53,13 +64,13 @@
 
         $_SESSION['msg'] = "Successful";
 
-        header("Location: ../confirmation_result.php?oid=$oid");  // Payment successfully, redirect to confirmation result page
+        header("Location: ../confirmation_result.php?oid=$oid&step=next");  // Payment successfully, go to confirmation result page
 
     } else {
 
         $_SESSION['msg'] = "Failed";
 
-        header('Location: ../confirmation_result.php');  // Payment failed, redirect to confirmation result page
+        header('Location: ../confirmation_result.php?step=next');  // Payment failed, go to confirmation result page
 
     }
 

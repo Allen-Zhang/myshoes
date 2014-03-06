@@ -1,7 +1,6 @@
 <?php
     require_once('biz/db.mysql.php');
 ?>
-
 <!DOCTYPE html>
 <html>
  <head>
@@ -15,6 +14,9 @@
 
     <!-- Invoke the layout of header -->
     <?php include_once('header.php'); ?>
+
+    <!-- Validate user login -->
+    <?php include_once('biz/validation.php'); ?>
 
     <?php 
         // Fetch data from orders table

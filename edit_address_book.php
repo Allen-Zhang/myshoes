@@ -2,16 +2,25 @@
     require_once('biz/db.mysql.php');
     require_once('biz/lib.php');
 
-    $aid = $_GET['aid'];
-    $page = $_GET['page'];  // Determine which page invokes this function, edit_address or address page
+    if(!isset($_GET['aid']) || !isset($_GET['page'])) {
 
-    $sql = "SELECT rec_name, rec_phone, address_line_one, address_line_two, city, state, zip, country 
-            FROM addresses 
-            WHERE aid = '$aid'";
+       header('Location: ../index.php');  // Illegal access, redirect to main page
+       exit;
 
-    $result = mysql_query($sql, $conn);
-    $row = mysql_fetch_array($result);
-    $rec_phone = str_replace("-","",str_replace(")","",str_replace("(","",$row['rec_phone'])));
+    } else {
+
+        $aid = $_GET['aid'];
+        $page = $_GET['page'];  // Determine which page invokes this function, edit_address or address page
+
+        $sql = "SELECT rec_name, rec_phone, address_line_one, address_line_two, city, state, zip, country 
+                FROM addresses 
+                WHERE aid = '$aid'";
+
+        $result = mysql_query($sql, $conn);
+        $row = mysql_fetch_array($result);
+        $rec_phone = str_replace("-","",str_replace(")","",str_replace("(","",$row['rec_phone'])));
+
+    } 
 ?>
 
 <!DOCTYPE html>

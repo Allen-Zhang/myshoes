@@ -1,7 +1,11 @@
 <?php
     require_once('biz/db.mysql.php');
-?>
 
+    if(empty($_POST['name_on_card']) || empty($_POST['card_number'])) {
+        header('Location: index.php');  // Illegal access, redirect to main page
+        exit;
+    }
+?>
 <!DOCTYPE html>
 <html>
  <head>
@@ -15,6 +19,9 @@
 
     <!-- Invoke the layout of header -->
     <?php include_once('header.php'); ?>
+
+    <!-- Validate user login -->
+    <?php include_once('biz/validation.php'); ?>
     
     <?php
         $name_on_card = $_POST['name_on_card'];
@@ -44,7 +51,7 @@
                   FROM addresses 
                   WHERE aid = ".$aid;
         $result_1 = mysql_query($sql_1, $conn);
-        $row_1 = mysql_fetch_array($result_1);        
+        $row_1 = mysql_fetch_array($result_1);     
     ?>
 
     <div class="confirmation">

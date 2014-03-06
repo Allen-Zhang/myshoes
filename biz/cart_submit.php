@@ -16,8 +16,8 @@
     } else {
 
         $_SESSION['cart'] = $_POST['carts'];  // Record all carts information in session carts
-        
-        header('Location: ../address.php');  // User is logged in, redirect to address page
+
+        header('Location: ../address.php?step=next');  // User is logged in, redirect to address page
 
     }
 

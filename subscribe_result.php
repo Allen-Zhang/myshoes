@@ -1,3 +1,11 @@
+<?php
+    require_once('biz/db.mysql.php');
+
+    if(empty($_GET['step'])) {
+        header('Location: index.php');  // Illegal access, redirect to main page
+        exit;
+    }
+?>
 <!DOCTYPE html>
 <html>
  <head>
@@ -12,23 +20,25 @@
     <!-- Invoke the layout of header -->
     <?php include_once('header.php'); ?>
 
+    <!-- Validate user login -->
+    <?php include_once('biz/validation.php'); ?>
+
     <div class="subscribe_result">
 
         <h2>Your Subscription Result</h2><br/>
 
         <div class="result_info">
             <?php
-                if(true) {
+                if(isset($_SESSION['subscriber'])) {
 
                     echo '<p><font>Subscribe successfully!</font></p><br/>';
                     echo '<p>Email Address: <span class="subscriber">'.$_SESSION['subscriber'].'</span></p>';
                     echo '<p>Thank you for joining us, our newsletter will weekly deliver straight to your inbox offering the most up-to-date news and shopping guide including the new arrival shoes, the discounted shoes, and other shoes news about MyShoes to enjoy your online shopping.</p>';
 
                 }
+
                 else {
-
-                    echo '<p><font>Sorry, your order payment failed. <br>Please try again.</font></p>';
-
+                    echo '<p><font>Sorry, subscribe failed. <br>Please try again.</font></p>';
                 }
             ?>
 

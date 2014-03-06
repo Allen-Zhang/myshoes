@@ -1,4 +1,4 @@
-<?php
+<?php  
     session_start();
 
     $login = false;
@@ -10,11 +10,6 @@
 <!-- Header layout of the website  -->
 <div class="header">
 
-	<!-- Website Logo -->
-    <div class="header_logo">
-        <a href="index.php"><img src="images/logo/MyShoes_small.jpg" alt="MyShoes Logo"></a>
-    </div>
-
     <!-- Header Info -->
     <div class="header_info">
 
@@ -22,16 +17,12 @@
         <?php
             // Determine whether login
             if($login) {
-
                echo '<a href="account_info.php">MY ACCOUNT</a>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;';
                echo '<a href="biz/user_logout.php">LOG OUT</a>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;';
-
             }
             else {
-
                echo '<a href="login.php">LOG IN</a>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;';
                echo '<a href="sign_up.php">SIGN UP</a>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;';
-               
             }
         ?>
 
@@ -48,36 +39,47 @@
     	</form>
     </div>
 
+    <!-- Website Logo -->
+    <div class="header_logo">
+        <a href="index.php"><img src="images/logo/MyShoes_small.jpg" alt="MyShoes Logo"></a>
+    </div>
 
     <!-- Navigation Menu -->
     <div>
         <ul id="nav">
             <li><a href="index.php">MyShoes</a></li>
 
-            <li><a href="#s1">Brands</a>
+            <li><a href="#">Brands</a>
                 <span id="s1"></span>
                 <ul class="subs">
                     <li><a href="#">Brand List 1</a>
                         <ul>
                             <li><a href="biz/product_redirect.php?category=brand&title=Adidas">Adidas</a></li>
+                            <li><a href="biz/product_redirect.php?category=brand&title=Converse">Converse</a></li>
                             <li><a href="biz/product_redirect.php?category=brand&title=Crocs">Crocs</a></li>
-                            <li><a href="biz/product_redirect.php?category=brand&title=ECCO">ECCO</a></li>
-                            <li><a href="biz/product_redirect.php?category=brand&title=Mezlan">Mezlan</a></li>
-                         
+                            <li><a href="biz/product_redirect.php?category=brand&title=Dockers">Dockers</a></li>
                         </ul>
                     </li>
                     <li><a href="#">Brand List 2</a>
                         <ul>
+                            <li><a href="biz/product_redirect.php?category=brand&title=ECCO">ECCO</a></li>
+                            <li><a href="biz/product_redirect.php?category=brand&title=New_Balance">New Balance</a></li>
                             <li><a href="biz/product_redirect.php?category=brand&title=Nike">Nike</a></li>
+                            <li><a href="biz/product_redirect.php?category=brand&title=Mezlan">Mezlan</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Brand List 3</a>
+                        <ul>
                             <li><a href="biz/product_redirect.php?category=brand&title=Polo_Ralph_Lauren">Polo Ralph Lauren</a></li>
+                            <li><a href="biz/product_redirect.php?category=brand&title=Reebok">Reebok</a></li>
                             <li><a href="biz/product_redirect.php?category=brand&title=Timberland">Timberland</a></li>
-                            <li><a href="biz/product_redirect.php?category=brand&title=Vans">Vans</a></li>  
+                            <li><a href="biz/product_redirect.php?category=brand&title=Vans">Vans</a></li>
                         </ul>
                     </li>
                 </ul>
             </li>
 
-            <li><a href="#s2">Styles</a>
+            <li><a href="#">Styles</a>
                 <span id="s2"></span>
                 <ul class="subs">
                     <li><a href="#">Style List 1</a>

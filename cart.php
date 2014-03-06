@@ -1,7 +1,6 @@
 <?php
     require_once('biz/db.mysql.php');
 ?>
-
 <!DOCTYPE html>
 <html>
  <head>

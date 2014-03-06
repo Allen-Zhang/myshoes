@@ -1,8 +1,6 @@
 <?php
     require_once('biz/db.mysql.php');
-    require_once('biz/lib.php');
 ?>
-
 <!DOCTYPE html>
 <html>
  <head>
@@ -16,6 +14,9 @@
 
     <!-- Invoke the layout of header -->
     <?php include_once('header.php'); ?>
+
+    <!-- Validate user login -->
+    <?php include_once('biz/validation.php'); ?>
 
     <?php
         $sql = "SELECT aid, rec_name, rec_phone, address_line_one, address_line_two, city, state, zip, country 

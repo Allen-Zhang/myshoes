@@ -28,7 +28,7 @@
         var amount = <?php echo $row['amount']?>;
 
         //Compare quantity and amount value
-        if(qty.value < amount) {
+        if(qty.value > 0 && qty.value < amount) {
 
             qty.style.backgroundColor = "white";
             message.style.color = "#00C"; 

@@ -38,7 +38,7 @@
         // Fetch new address id
         $_SESSION['aid'] = mysql_insert_id($conn);
 
-        header('Location: ../payment.php');  // Delivery address add successfully, redirect to payment page
+        header('Location: ../payment.php?step=next');  // Delivery address add successfully, redirect to payment page
 
     } else {
 

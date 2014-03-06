@@ -1,7 +1,11 @@
 <?php
     require_once('biz/db.mysql.php');
+    
+    if(empty($_GET['step'])) {
+        header('Location: index.php');  // Illegal access, redirect to main page
+        exit;
+    }
 ?>
-
 <!DOCTYPE html>
 <html>
  <head>
@@ -15,6 +19,9 @@
 
     <!-- Invoke the layout of header -->
     <?php include_once('header.php'); ?>
+
+    <!-- Validate user login -->
+    <?php include_once('biz/validation.php'); ?>
 
     <div class="confirmation_result">
 

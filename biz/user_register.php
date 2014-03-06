@@ -6,7 +6,7 @@
 	require_once('db.mysql.php');
 
 	$email = $_POST['email'];
-	$password =  $_POST['password'];
+	$password =  md5($_POST['password']);
 	$username = $_POST['username'];
 	$phone = $_POST['userphone'];
 

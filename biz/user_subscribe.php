@@ -39,7 +39,7 @@
 
 			$_SESSION['subscriber'] = $subscribe_email;
 
-			header('Location: ../subscribe_result.php');  // Subscribe successfully, redirect to result page
+			header('Location: ../subscribe_result.php?step=next');  // Subscribe successfully, redirect to result page
 		
 		}
 	}

@@ -1,7 +1,7 @@
 body { 
 	margin:auto; 
 	padding-top:10px; 
-	width:80%;
+	width:1260px;
 }
 
 body input[type=text], body input[type=email], body input[type=password], body input[type=submit], body input[type=button], body select {
@@ -32,9 +32,8 @@ body label[class=msg] {
 
 /* Header Info */
 .header_info {
-	position:absolute;
-	right:10%; 
-	top:88px;
+	float:right;
+	margin-top:78px;
 	text-align:right;     
 }
 .header_info a {
@@ -144,10 +143,15 @@ body label[class=msg] {
 	width:100%; 
 	height:250px;	   
 	}
+.new_arrivals div{
+	float:left;
+	width:20%;
+	height:95%;
+	}
 .new_arrivals img {
 	padding-left:1%;
-	width:18.5%;
-	height:80%;
+	width:100%;
+	height:85%;;
 }
 font.section_title {
 	font-size:30px;
