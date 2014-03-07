@@ -91,7 +91,7 @@
     </div>
 
     <!-- Invoke the layout of footer -->
-    <?php include_once('footer.php'); ?>
+    <?php include_once('view/footer.php'); ?>
 
    
  </body>

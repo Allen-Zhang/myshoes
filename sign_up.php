@@ -4,7 +4,8 @@
   <meta charset="utf-8" />
   <title>Sign Up</title>
   <link type="text/css" rel="stylesheet" href="css/main.css"> 
-  <link type="text/css" rel="stylesheet" href="css/navigation.css"> 
+  <link type="text/css" rel="stylesheet" href="css/navigation.css">
+  <script type="text/javascript" src="js/validation.js"></script> 
  </head>
 
  <body>
@@ -20,7 +21,7 @@
                     
         <h2>New User Registration</h2>
 
-        <form action="biz/user_register.php" method="post">
+        <form action="user_register.php" method="post">
 
         <P>Hi, welcome to MyShoes, please enter your name, phone number, email address and password to create your account.</p>
                 

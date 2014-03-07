@@ -3,8 +3,8 @@
  <head>
   <meta charset="utf-8" />
   <title>Contact Us</title>
-  <link type="text/css" rel="stylesheet" href="css/main.css"> 
-  <link type="text/css" rel="stylesheet" href="css/navigation.css"> 
+  <link type="text/css" rel="stylesheet" href="../css/main.css"> 
+  <link type="text/css" rel="stylesheet" href="../css/navigation.css"> 
  </head>
 
  <body>
@@ -13,7 +13,7 @@
     <?php include_once('header.php'); ?>
 
     <div class="decoration4">
-        <img src="images/decoration/decoration04.jpg">
+        <img src="../images/decoration/decoration04.jpg">
     </div>
 
     <div class="contact">
