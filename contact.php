@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8" />
+  <title>Contact Us</title>
+  <link type="text/css" rel="stylesheet" href="../css/main.css"> 
+  <link type="text/css" rel="stylesheet" href="../css/navigation.css"> 
+ </head>
+
+ <body>
+
+    <!-- Invoke the layout of header -->
+    <?php include_once('header.php'); ?>
+
+    <div class="decoration4">
+        <img src="../images/decoration/decoration04.jpg">
+    </div>
+
+    <div class="contact">
+        <h2>Contact Information</h2>
+        <p>Please contact us with ANY questions regarding our merchandise, availability or order status the following ways:</p>
+
+        <h3>Telephone</h3>
+        <dl>
+            <dt>Call us toll free:</dt>
+                <dd><span>1-617-800-8000</span></dd>
+            <dt>Customer Service Hours:</dt>
+                <dd>Monday - Friday: 8am - 5pm ET<br/>
+                    Saturday: 8am - 3pm ET</dd>
+        </dl>
+
+        <h3>Email</h3>
+        <p>Send us an email at <span>customer_service@myshoes.com</span>, our Customer 
+            Service Representatives will reply to your request within 24 hours.</p>
+
+        <h3>Mail</h3>
+        <dl>
+            <dt>If you need to send something to MyShoes.com please address your package to:</dt>
+                <dd class="map"><span><a href="map.php">MyShoes Customer Center</a></span><br/>
+                <span><a href="map.php">8080 Fashion Street</a></span><br/>
+                <span><a href="map.php">Boston, MA, 20108, USA</a></span></dd>
+        </dl>
+    </div>
+
+    <!-- Invoke the layout of footer -->
+    <?php include_once('footer.php'); ?>
+
+ </body>
+</html>
